@@ -199,7 +199,7 @@ minetest.register_node("mystreets:manhole", {
 
 --Manhole open
 minetest.register_node("mystreets:manhole_open", {
-	description = "Manhole Open",
+--	description = "Manhole Open",
 	tiles = {
 			"mystreets_manhole_top_closed.png",
 			"mystreets_concrete.png",
@@ -276,7 +276,7 @@ minetest.register_node("mystreets:manhole_open", {
 
 --Manhole shaft
 minetest.register_node("mystreets:manhole_shaft", {
-	description = "Manhole Open",
+	description = "Manhole Shaft",
 	tiles = {
 			"mystreets_concrete.png",
 			"mystreets_concrete.png",
@@ -325,3 +325,36 @@ minetest.register_node("mystreets:manhole_shaft", {
 		},
 
 	})
+--Crafting
+minetest.register_craft({
+	output = "mystreets:grate 6",
+	recipe = {
+		{"default:steel_ingot", "mystreets:ingot_lead",""},
+		{"default:steel_ingot", "mystreets:ingot_lead",""},
+		{"default:steel_ingot", "mystreets:ingot_lead",""},
+	}
+})
+minetest.register_craft({
+	output = "mystreets:manhole 6",
+	recipe = {
+		{"mystreets:asphalt", "mystreets:grate","mystreets:asphalt"},
+		{"mystreets:asphalt", "","mystreets:asphalt"},
+		{"", "",""},
+	}
+})
+minetest.register_craft({
+	output = "mystreets:manhole_cover_closed 6",
+	recipe = {
+		{"default:steel_ingot", "default:steel_ingot","default:steel_ingot"},
+		{"mystreets:ingot_lead", "mystreets:ingot_lead","mystreets:ingot_lead"},
+		{"", "",""},
+	}
+})
+minetest.register_craft({
+	output = "mystreets:manhole_shaft 6",
+	recipe = {
+		{"mystreets:concrete", "","mystreets:concrete"},
+		{"mystreets:concrete", "","mystreets:concrete"},
+		{"mystreets:concrete", "","mystreets:concrete"},
+	}
+})

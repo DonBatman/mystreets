@@ -46,3 +46,12 @@ minetest.register_node("mystreets:sewer_water_flowing", {
 	post_effect_color = {a=180, r=25, g=40, b=1},
 	groups = {liquid=2, not_in_creative_inventory=1},
 })
+--Crafting
+minetest.register_craft({
+	output = "mystreets:sewer_water 3",
+	recipe = {
+		{"bucket:bucket_water", "",""},
+		{"default:grass_4", "",""},
+		{"", "",""},
+	}
+})
