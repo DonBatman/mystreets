@@ -25,10 +25,12 @@ minetest.register_craft({
 	}
 })
 minetest.register_craft({
-	type = "cooking",
-	output = "mystreets:galvanized_steel 1",
-	recipe = "default:steel_ingot",
-	cooktime = 2
+	output = "mystreets:galvanized_steel 4",
+	recipe = {
+		{'default:steel_ingot','default:steel_ingot','mystreets:ingot_zinc'},
+		{'default:steel_ingot','default:steel_ingot','mystreets:ingot_zinc'},
+		{'default:steel_ingot','default:steel_ingot','mystreets:ingot_zinc'},
+	}
 })
 
 -- Galvanized steel fence
