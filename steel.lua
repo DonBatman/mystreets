@@ -17,7 +17,7 @@
 	})
 --Craft
 minetest.register_craft({
-	output = "mystreets:galvanized_steel_block 6",
+	output = "mystreets:galvanized_steel_block 4",
 	recipe = {
 		{'mystreets:galvanized_steel', 'mystreets:galvanized_steel',""},
 		{'mystreets:galvanized_steel', 'mystreets:galvanized_steel',""},
