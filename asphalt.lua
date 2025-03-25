@@ -259,3 +259,75 @@
 		groups = {cracky = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
+
+--Turn Arrow Left
+	minetest.register_node("mystreets:asphalt_turn_arrow_left", {
+		description = "Left Turn Arrow",
+		tiles = {
+			"mystreets_asphalt_turn_arrow_left.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png"
+		},
+		drawtype = "normal",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		groups = {cracky = 1},
+		sounds = default.node_sound_stone_defaults(),
+	})
+
+--Turn Arrow Right
+	minetest.register_node("mystreets:asphalt_turn_arrow_right", {
+		description = "Right Turn Arrow",
+		tiles = {
+			"mystreets_asphalt_turn_arrow_right.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png"
+		},
+		drawtype = "normal",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		groups = {cracky = 1},
+		sounds = default.node_sound_stone_defaults(),
+	})
+
+--Parking
+	minetest.register_node("mystreets:asphalt_parking", {
+		description = "Parking",
+		tiles = {
+			"mystreets_asphalt_parking.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png"
+		},
+		drawtype = "normal",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		groups = {cracky = 1},
+		sounds = default.node_sound_stone_defaults(),
+	})
+
+--Yellow Arrows
+	minetest.register_node("mystreets:asphalt_yellow_arrows", {
+		description = "Yellow Arrows",
+		tiles = {
+			"mystreets_asphalt_yellow_arrow.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png"
+		},
+		drawtype = "normal",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		groups = {cracky = 1},
+		sounds = default.node_sound_stone_defaults(),
+	})

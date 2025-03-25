@@ -1,12 +1,12 @@
 minetest.register_node("mystreets:billboard", {
 	description = "Billboard",
 	tiles = {
+		"mystreets_billboard.png",
+		"default_pine_wood.png^[transformFXR90",
 		"default_pine_wood.png",
 		"default_pine_wood.png",
 		"default_pine_wood.png",
 		"default_pine_wood.png",
-		"default_pine_wood.png",
-		"mystreets_billboard.png"
 	},
 	drawtype = "nodebox",
 	paramtype = "light",
@@ -15,13 +15,13 @@ minetest.register_node("mystreets:billboard", {
 	node_box = {
 		type = "fixed",
 		fixed = {
-			{-1.25, -0.5, 0.375, 1.25, 0.875, 0.5},
+			{-1.5, -0.5, -1.5, 0.5, -0.375, 1.5},
 		}
 	},
 	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-1.25, -0.5, 0.375, 1.25, 0.875, 0.5},
+			{-1.5, -0.5, -1.5, 0.5, -0.375, 1.5},
 		}
 	},
 	

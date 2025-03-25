@@ -131,3 +131,39 @@ minetest.register_craft({
 		{"", "",""},
 	}
 })
+--Turn Arrow Left
+minetest.register_craft({
+	output = "mystreets:asphalt_turn_arrow_left 4",
+	recipe = {
+		{"", "mystreets:paint_brush_white","mystreets:asphalt"},
+		{"", "","mystreets:asphalt"},
+		{"", "","mystreets:asphalt"},
+	}
+})
+--Turn Arrow Right
+minetest.register_craft({
+	output = "mystreets:asphalt_turn_arrow_right 4",
+	recipe = {
+		{"mystreets:asphalt", "mystreets:paint_brush_white",""},
+		{"mystreets:asphalt", "",""},
+		{"mystreets:asphalt", "",""},
+	}
+})
+--Parking
+minetest.register_craft({
+	output = "mystreets:asphalt_parking 5",
+	recipe = {
+		{"mystreets:asphalt", "mystreets:paint_brush_yellow",""},
+		{"mystreets:asphalt", "mystreets:paint_brush_yellow",""},
+		{"mystreets:asphalt", "",""},
+	}
+})
+--Parking
+minetest.register_craft({
+	output = "mystreets:asphalt_yellow_arrows 5",
+	recipe = {
+		{"mystreets:asphalt", "mystreets:paint_brush_yellow","mystreets:asphalt"},
+		{"mystreets:paint_brush_yellow", "","mystreets:paint_brush_yellow"},
+		{"", "mystreets:asphalt",""},
+	}
+})
