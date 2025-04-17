@@ -3,7 +3,7 @@
 		description = "Asphalt",
 		tiles = {"mystreets_asphalt.png"},
 		drawtype = "normal",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 --minetest.register_alias("asphalt", "mystreets:asphalt")
@@ -22,7 +22,7 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -40,7 +40,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -58,7 +58,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -76,7 +76,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -94,7 +94,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -112,7 +112,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -130,7 +130,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -148,7 +148,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -166,7 +166,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -184,7 +184,7 @@
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky = 1},
+	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -202,7 +202,7 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -220,7 +220,7 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -238,7 +238,7 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -256,7 +256,7 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -274,7 +274,7 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -292,7 +292,7 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -310,7 +310,7 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
 
@@ -328,6 +328,6 @@
 		drawtype = "normal",
 		paramtype = "light",
 		paramtype2 = "facedir",
-		groups = {cracky = 1},
+		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
