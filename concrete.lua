@@ -5,7 +5,7 @@ minetest.register_node("mystreets:sidewalk", {
 	tiles = {"mystreets_sidewalk.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky=1},
+	groups = {cracky=1, concrete = 1},
 	stack_max = 250,
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -26,7 +26,7 @@ minetest.register_node("mystreets:concrete", {
 	tiles = {"mystreets_concrete.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {cracky=1},
+	groups = {cracky=1, concrete = 1},
 	stack_max = 250,
 	sounds = default.node_sound_stone_defaults(),
 
