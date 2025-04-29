@@ -82,3 +82,34 @@ minetest.register_craft({
 		{"","mystreets:plastic",""},
 	}
 })
+
+minetest.register_node("mystreets:barrier", {
+	description = "Barrier",
+	tiles = {
+		"mystreets_barrier_end.png",
+		"mystreets_barrier_end.png",
+		"mystreets_barrier_end.png",
+		"mystreets_barrier_end.png",
+		"mystreets_barrier_side.png",
+		"mystreets_barrier_side.png",
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.49, 0.25, -0.0625, 0.49, 0.5, 0.0625},
+			{-0.375, -0.0625, -0.125, -0.3125, 0.375, -0.0625},
+			{-0.375, -0.5, -0.1875, -0.3125, 0.0625, -0.125},
+			{-0.375, -0.5, 0.125, -0.3125, 0.0625, 0.1875},
+			{-0.375, -0.0625, 0.0625, -0.3125, 0.375, 0.125},
+			{0.3125, -0.0625, 0.0625, 0.375, 0.375, 0.125},
+			{0.3125, -0.0625, -0.125, 0.375, 0.375, -0.0625},
+			{0.3125, -0.5, 0.125, 0.375, 0.0625, 0.1875},
+			{0.3125, -0.5, -0.1875, 0.375, 0.0625, -0.125},
+		}
+	},
+
+})

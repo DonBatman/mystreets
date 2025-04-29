@@ -6,7 +6,7 @@
 		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
---minetest.register_alias("asphalt", "mystreets:asphalt")
+minetest.register_alias("asphalt", "mystreets:asphalt")
 
 -- Asphalt block with center dashed line
 	minetest.register_node("mystreets:asphalt_center_dashed", {
@@ -25,7 +25,6 @@
 		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
-
 -- Asphalt block with center solid line
 	minetest.register_node("mystreets:asphalt_center_solid", {
 	description = "Asphalt with center solid line",
@@ -151,7 +150,23 @@
 	groups = {cracky = 1, asphalt = 1},
 	sounds = default.node_sound_stone_defaults(),
 	})
-
+-- Asphalt block with center solid line
+minetest.register_node("mystreets:asphalt_center_solid", {
+	description = "Asphalt with center solid line",
+	tiles = {
+			"mystreets_asphalt_center_solid.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt_center_solid.png",
+			"mystreets_asphalt_center_solid.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1},
+	sounds = default.node_sound_stone_defaults(),
+})
 -- Asphalt Outside Corner
 	minetest.register_node("mystreets:asphalt_ocorner", {
 	description = "Asphalt Outside Corner",

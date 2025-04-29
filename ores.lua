@@ -159,3 +159,37 @@ minetest.register_craft({
 		y_min           = -30000,
 	})
 --------------------------------------------------------------
+--Brass
+
+--Block
+minetest.register_node("mystreets:block_brass", {
+	description = ("Brass Block"),
+	tiles = {"mystreets_block_brass.png"},
+	is_ground_content = false,
+	groups = {cracky = 1, level = 2},
+	sounds = default.node_sound_metal_defaults(),
+})
+--Ingot
+minetest.register_craftitem("mystreets:ingot_brass", {
+	description = ("brass Ingot"),
+	inventory_image = "mystreets_ingot_brass.png"
+})
+--Crafting
+minetest.register_craft({
+	type = "shapeless",
+	output = "mystreets:ingot_brass",
+	recipe = {
+		"mystreets:ingot_zinc","default:copper_ingot"
+	}
+})
+minetest.register_craft({
+	output = "mystreets:block_brass",
+	recipe = {
+		{"mystreets:ingot_brass","mystreets:ingot_brass","mystreets:ingot_brass"},
+		{"mystreets:ingot_brass","mystreets:ingot_brass","mystreets:ingot_brass"},
+		{"mystreets:ingot_brass","mystreets:ingot_brass","mystreets:ingot_brass"},
+	}
+})
+
+
+

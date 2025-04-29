@@ -1,58 +1,73 @@
--- Galvanized steel block
-	minetest.register_node("mystreets:galvanized_steel", {
-		description = "Galvanized Steel",
-		tiles = {"mystreets_galvanized_steel.png"},
-		drawtype = "normal",
-		paramtype = "light",
-		groups = {cracky = 2},
-		sounds = default.node_sound_stone_defaults(),
-	})
-	minetest.register_node("mystreets:galvanized_steel_block", {
-		description = "Galvanized Steel Block",
-		tiles = {"mystreets_galvanized_steel_block.png"},
-		drawtype = "normal",
-		paramtype = "light",
-		groups = {cracky = 2},
-		sounds = default.node_sound_stone_defaults(),
-	})
+-- Galvanized steel
+minetest.register_node("mystreets:galvanized_steel", {
+	description = "Galvanized steel",
+	tiles = {"mystreets_galvanized_steel.png"},
+	drawtype = "normal",
+	paramtype = "light",
+	groups = {cracky = 2},
+	sounds = default.node_sound_stone_defaults(),
+})
 --Craft
 minetest.register_craft({
-	output = "mystreets:galvanized_steel_block 4",
+	output = "mystreets:galvanized_steel 2",
 	recipe = {
-		{'mystreets:galvanized_steel', 'mystreets:galvanized_steel',""},
-		{'mystreets:galvanized_steel', 'mystreets:galvanized_steel',""},
-		{"","",""}
+		{'default:steelblock', 'mystreets:block_zinc', ''}
+	}
+})
+--Galvanized Steel Block
+minetest.register_node("mystreets:block_galvanized_steel", {
+	description = ("Galvanized Steel Block"),
+	tiles = {"mystreets_galvanized_steel_block.png"},
+	is_ground_content = false,
+	groups = {cracky = 1, level = 2},
+	sounds = default.node_sound_metal_defaults(),
+})
+--Ingot
+minetest.register_craftitem("mystreets:ingot_galvanized_steel", {
+	description = ("Galvanized_Steel Ingot"),
+	inventory_image = "mystreets_ingot_galvanized_steel.png"
+})
+--Crafting
+minetest.register_craft({
+	type = "shapeless",
+	output = "mystreets:ingot_galvanized_steel",
+	recipe = {
+		"mystreets:ingot_zinc","default:steel_ingot"
 	}
 })
 minetest.register_craft({
-	output = "mystreets:galvanized_steel 4",
+	output = "mystreets:block_galvanized_steel 2",
 	recipe = {
-		{'default:steel_ingot','default:steel_ingot','mystreets:ingot_zinc'},
-		{'default:steel_ingot','default:steel_ingot','mystreets:ingot_zinc'},
-		{'default:steel_ingot','default:steel_ingot','mystreets:ingot_zinc'},
+		{"mystreets:ingot_galvanized_steel","mystreets:ingot_galvanized_steel","mystreets:ingot_galvanized_steel"},
+		{"mystreets:ingot_galvanized_steel","mystreets:ingot_galvanized_steel","mystreets:ingot_galvanized_steel"},
+		{"mystreets:ingot_galvanized_steel","mystreets:ingot_galvanized_steel","mystreets:ingot_galvanized_steel"},
 	}
 })
-
+minetest.register_craft({
+	output = "mystreets:galvanized_steel 2",
+	recipe = {
+		{"mystreets:ingot_galvanized_steel","ingot_galvanized_steel",""},
+		{"mystreets:ingot_galvanized_steel","ingot_galvanized_steel",""},
+		{"","",""},
+	}
+})
 -- Galvanized steel fence
-	minetest.register_node("mystreets:fence_galvanized_steel", {
-		description = "Galvanized steel fence",
-		drawtype = "fencelike",
-		tiles = {"mystreets_galvanized_steel.png"},
-		paramtype = "light",
-		is_ground_content = true,
-		selection_box = {
-			type = "fixed",
-			fixed = {-1/8, -1/2, -1/8, 1/8, 1/2, 1/8},
-		},
-		groups = {cracky = 2},
-		sounds = default.node_sound_stone_defaults(),
-	})
+default.register_fence("mystreets:fence_galvanized_steel", {
+	description = ("Galvanized Steel Fence"),
+	texture = "mystreets_galvanized_steel.png",
+	inventory_image = "mystreets_fence_galvanized_steel.png",
+	wield_image = "mystreets_fence_galvanized_steel.png",
+	material = "mystreets_galvanized_steel.png",
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2},
+	sounds = default.node_sound_wood_defaults()
+})
 --Craft
 minetest.register_craft({
 	output = "mystreets:fence_galvanized_steel 6",
 	recipe = {
-		{'mystreets:galvanized_steel', 'mystreets:galvanized_steel', 'mystreets:galvanized_steel'},
-		{'mystreets:galvanized_steel', 'mystreets:galvanized_steel', 'mystreets:galvanized_steel'}
+		{'', 'mystreets:ingot_galvanized_steel', ''},
+		{'', 'mystreets:ingot_galvanized_steel', ''},
+		{'', 'mystreets:ingot_galvanized_steel', ''},
 	}
 })
 

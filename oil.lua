@@ -38,7 +38,6 @@ minetest.register_node("mystreets:oil_source", {
 	description = "Oil Source",
 	inventory_image = minetest.inventorycube("mystreets_oil_inv.png"),
 	drawtype = "liquid",
-	light_source = 14,
 	tiles = {
 		{name="mystreets_oil_source_animated.png", 
 		animation={type="vertical_frames", aspect_w=16, aspect_h=16, length=2.0}}
