@@ -106,6 +106,37 @@ minetest.register_node("mystreets:sign_men_at_work", {
 	},
 
 })
+minetest.register_node("mystreets:sign_men_at_work_post", {
+	description = "Men At Work Sign With Post",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_men_working.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.0625, -0.5, -0.1875, 0.0625, 0.5, -0.125},
+			{-0.125, -0.4375, -0.1875, 0.125, 0.4375, -0.125},
+			{-0.1875, -0.375, -0.1875, 0.1875, 0.375, -0.125},
+			{-0.25, -0.3125, -0.1875, 0.25, 0.3125, -0.125},
+			{-0.3125, -0.25, -0.1875, 0.3125, 0.25, -0.125},
+			{-0.375, -0.1875, -0.1875, 0.375, 0.1875, -0.125},
+			{-0.4375, -0.125, -0.1875, 0.4375, 0.125, -0.125},
+			{-0.5, -0.0625, -0.1875, 0.5, 0.0625, -0.125},
+		}
+	},
+
+})
 minetest.register_node("mystreets:sign_arrow_left", {
 	description = "Arrow Left Sign",
 	tiles = {
@@ -131,6 +162,37 @@ minetest.register_node("mystreets:sign_arrow_left", {
 			{-0.375, -0.1875, 0.4375, 0.375, 0.1875, 0.5},
 			{-0.4375, -0.125, 0.4375, 0.4375, 0.125, 0.5},
 			{-0.5, -0.0625, 0.4375, 0.5, 0.0625, 0.5},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_arrow_left_post", {
+	description = "Arrow Left Sign With Post",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_arrow_left.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.0625, -0.5, -0.1875, 0.0625, 0.5, -0.125},
+			{-0.125, -0.4375, -0.1875, 0.125, 0.4375, -0.125},
+			{-0.1875, -0.375, -0.1875, 0.1875, 0.375, -0.125},
+			{-0.25, -0.3125, -0.1875, 0.25, 0.3125, -0.125},
+			{-0.3125, -0.25, -0.1875, 0.3125, 0.25, -0.125},
+			{-0.375, -0.1875, -0.1875, 0.375, 0.1875, -0.125},
+			{-0.4375, -0.125, -0.1875, 0.4375, 0.125, -0.125},
+			{-0.5, -0.0625, -0.1875, 0.5, 0.0625, -0.125},
 		}
 	},
 
@@ -164,6 +226,37 @@ minetest.register_node("mystreets:sign_arrow_right", {
 	},
 
 })
+minetest.register_node("mystreets:sign_arrow_right_post", {
+	description = "Arrow Right Sign With Post",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_arrow_right.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.0625, -0.5, -0.1875, 0.0625, 0.5, -0.125},
+			{-0.125, -0.4375, -0.1875, 0.125, 0.4375, -0.125},
+			{-0.1875, -0.375, -0.1875, 0.1875, 0.375, -0.125},
+			{-0.25, -0.3125, -0.1875, 0.25, 0.3125, -0.125},
+			{-0.3125, -0.25, -0.1875, 0.3125, 0.25, -0.125},
+			{-0.375, -0.1875, -0.1875, 0.375, 0.1875, -0.125},
+			{-0.4375, -0.125, -0.1875, 0.4375, 0.125, -0.125},
+			{-0.5, -0.0625, -0.1875, 0.5, 0.0625, -0.125},
+		}
+	},
+
+})
 minetest.register_node("mystreets:sign_arrow_straight", {
 	description = "Arrow Straight Sign",
 	tiles = {
@@ -189,6 +282,37 @@ minetest.register_node("mystreets:sign_arrow_straight", {
 			{-0.375, -0.1875, 0.4375, 0.375, 0.1875, 0.5},
 			{-0.4375, -0.125, 0.4375, 0.4375, 0.125, 0.5},
 			{-0.5, -0.0625, 0.4375, 0.5, 0.0625, 0.5},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_arrow_straight_post", {
+	description = "Arrow Straight Sign With Post",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_arrow_straight.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.0625, -0.5, -0.1875, 0.0625, 0.5, -0.125},
+			{-0.125, -0.4375, -0.1875, 0.125, 0.4375, -0.125},
+			{-0.1875, -0.375, -0.1875, 0.1875, 0.375, -0.125},
+			{-0.25, -0.3125, -0.1875, 0.25, 0.3125, -0.125},
+			{-0.3125, -0.25, -0.1875, 0.3125, 0.25, -0.125},
+			{-0.375, -0.1875, -0.1875, 0.375, 0.1875, -0.125},
+			{-0.4375, -0.125, -0.1875, 0.4375, 0.125, -0.125},
+			{-0.5, -0.0625, -0.1875, 0.5, 0.0625, -0.125},
 		}
 	},
 
@@ -222,6 +346,37 @@ minetest.register_node("mystreets:sign_bump", {
 	},
 
 })
+minetest.register_node("mystreets:sign_bump_post", {
+	description = "Bump  Sign With Post",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_bump.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.0625, -0.5, -0.1875, 0.0625, 0.5, -0.125},
+			{-0.125, -0.4375, -0.1875, 0.125, 0.4375, -0.125},
+			{-0.1875, -0.375, -0.1875, 0.1875, 0.375, -0.125},
+			{-0.25, -0.3125, -0.1875, 0.25, 0.3125, -0.125},
+			{-0.3125, -0.25, -0.1875, 0.3125, 0.25, -0.125},
+			{-0.375, -0.1875, -0.1875, 0.375, 0.1875, -0.125},
+			{-0.4375, -0.125, -0.1875, 0.4375, 0.125, -0.125},
+			{-0.5, -0.0625, -0.1875, 0.5, 0.0625, -0.125},
+		}
+	},
+
+})
 minetest.register_node("mystreets:sign_pedestrian_crossing", {
 	description = "Pedestrian Crossing Sign",
 	tiles = {
@@ -247,6 +402,37 @@ minetest.register_node("mystreets:sign_pedestrian_crossing", {
 			{-0.375, -0.1875, 0.4375, 0.375, 0.1875, 0.5},
 			{-0.4375, -0.125, 0.4375, 0.4375, 0.125, 0.5},
 			{-0.5, -0.0625, 0.4375, 0.5, 0.0625, 0.5},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_pedestrian_crossing_post", {
+	description = "Pedestrian Crossing Sign With Post",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_pedestrian_crossing.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.0625, -0.5, -0.1875, 0.0625, 0.5, -0.125},
+			{-0.125, -0.4375, -0.1875, 0.125, 0.4375, -0.125},
+			{-0.1875, -0.375, -0.1875, 0.1875, 0.375, -0.125},
+			{-0.25, -0.3125, -0.1875, 0.25, 0.3125, -0.125},
+			{-0.3125, -0.25, -0.1875, 0.3125, 0.25, -0.125},
+			{-0.375, -0.1875, -0.1875, 0.375, 0.1875, -0.125},
+			{-0.4375, -0.125, -0.1875, 0.4375, 0.125, -0.125},
+			{-0.5, -0.0625, -0.1875, 0.5, 0.0625, -0.125},
 		}
 	},
 
@@ -293,6 +479,152 @@ minetest.register_node("mystreets:sign_One_way_right", {
 		fixed = {
 			{-0.5, -0.125, 0.4375, 0.5, 0.1875, 0.5},
 			{-0.4375, -0.1875, 0.4375, 0.4375, 0.25, 0.5},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_One_way_left_post", {
+	description = "One Way Left Sign With Post",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_one_way_left.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.25, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.25, 0.0625},
+			{-0.5, -0.125, -0.1875, 0.5, 0.1875, -0.125},
+			{-0.4375, -0.1875, -0.1875, 0.4375, 0.25, -0.125},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_One_way_right_post", {
+	description = "One Way Right Sign With Post",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_one_way_right.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.25, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.25, 0.0625},
+			{-0.5, -0.125, -0.1875, 0.5, 0.1875, -0.125},
+			{-0.4375, -0.1875, -0.1875, 0.4375, 0.25, -0.125},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_speed_25", {
+	description = "Speed Sign 25",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_25.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.5, -0.5, -0.1875, 0.5, 0.5, -0.125},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_speed_50", {
+	description = "Speed Sign 50",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_50.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.5, -0.5, -0.1875, 0.5, 0.5, -0.125},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_speed_90", {
+	description = "Speed Sign 90",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_90.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.5, -0.5, -0.1875, 0.5, 0.5, -0.125},
+		}
+	},
+
+})
+minetest.register_node("mystreets:sign_speed_100", {
+	description = "Speed Sign 100",
+	tiles = {
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_post_tnb.png",
+		"mystreets_sign_100.png"
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
+			{-0.125, -0.5, -0.0625, 0.125, 0.5, 0.0625},
+			{-0.5, -0.5, -0.1875, 0.5, 0.5, -0.125},
 		}
 	},
 
