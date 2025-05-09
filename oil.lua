@@ -14,7 +14,7 @@ minetest.register_node("mystreets:oil_flowing", {
 		},
 
 	},
-	alpha = 250, 
+	use_texture_alpha = "clip", 
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
 	walkable = false,
@@ -43,7 +43,7 @@ minetest.register_node("mystreets:oil_source", {
 		animation={type="vertical_frames", aspect_w=16, aspect_h=16, length=2.0}}
 	},
 
-	alpha = 250,
+	use_texture_alpha = "clip",
 	paramtype = "light",
 	walkable = false,
 	pointable = true,
