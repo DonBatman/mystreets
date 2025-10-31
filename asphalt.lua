@@ -346,3 +346,37 @@ minetest.register_node("mystreets:asphalt_center_solid", {
 		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
+--Diagonal 1
+	minetest.register_node("mystreets:asphalt_diagonal_1", {
+		description = "Diagonal Lines 1",
+		tiles = {
+			"mystreets_asphalt_diagonal.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png"
+		},
+		drawtype = "normal",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		groups = {cracky = 1, asphalt = 1},
+		sounds = default.node_sound_stone_defaults(),
+	})
+--Diagonal 2
+	minetest.register_node("mystreets:asphalt_diagonal_2", {
+		description = "Diagonal Lines 2",
+		tiles = {
+			"mystreets_asphalt_diagonal2.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png"
+		},
+		drawtype = "normal",
+		paramtype = "light",
+		paramtype2 = "facedir",
+		groups = {cracky = 1, asphalt = 1},
+		sounds = default.node_sound_stone_defaults(),
+	})

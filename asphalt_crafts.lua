@@ -167,3 +167,22 @@ minetest.register_craft({
 		{"", "mystreets:asphalt",""},
 	}
 })
+
+--Asphalt Diagonal 1
+minetest.register_craft({
+	output = "mystreets:asphalt_diagonal_1 9",
+	recipe = {
+		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_yellow"},
+		{"mystreets:asphalt", "mystreets:paint_brush_yellow","mystreets:asphalt"},
+		{"mystreets:paint_brush_yellow", "mystreets:asphalt","mystreets:asphalt"},
+	}
+})
+--Asphalt Diagonal 2
+minetest.register_craft({
+	output = "mystreets:asphalt_diagonal_2 9",
+	recipe = {
+		{"mystreets:paint_brush_yellow", "mystreets:asphalt","mystreets:asphalt"},
+		{"mystreets:asphalt", "mystreets:paint_brush_yellow","mystreets:asphalt"},
+		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_yellow"},
+	}
+})

@@ -1,4 +1,4 @@
-minetest.register_node("mystreets:stop_sign", {
+core.register_node("mystreets:stop_sign", {
 	description = "Stop Sign",
 	tiles = {
 		"mystreets_stop_tnb.png",
@@ -28,7 +28,7 @@ minetest.register_node("mystreets:stop_sign", {
 
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:stop_sign 2",
 	recipe = {
 		{"mystreets:paint_brush_red", "group:wood","mystreets:lightpost"},
@@ -37,7 +37,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_node("mystreets:yeild_sign", {
+core.register_node("mystreets:yeild_sign", {
 	description = "Yeild Sign",
 	tiles = {
 		"mystreets_stop_tnb.png",
@@ -68,7 +68,7 @@ minetest.register_node("mystreets:yeild_sign", {
 
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:yeild_sign 2",
 	recipe = {
 		{"mystreets:paint_brush_white", "group:wood","mystreets:lightpost"},
@@ -77,7 +77,7 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_node("mystreets:sign_men_at_work", {
+core.register_node("mystreets:sign_men_at_work", {
 	description = "Men At Work Sign",
 	tiles = {
 		"mystreets_sign_back.png",
@@ -106,7 +106,17 @@ minetest.register_node("mystreets:sign_men_at_work", {
 	},
 
 })
-minetest.register_node("mystreets:sign_men_at_work_post", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_men_at_work 2",
+	recipe = {
+		{"mystreets:paint_brush_yellow", "mystreets:ingot_galvanized_steel",""},
+		{"mystreets:paint_brush_yellow", "mystreets:ingot_galvanized_steel",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_men_at_work_post", {
 	description = "Men At Work Sign With Post",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -137,7 +147,17 @@ minetest.register_node("mystreets:sign_men_at_work_post", {
 	},
 
 })
-minetest.register_node("mystreets:sign_arrow_left", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_men_at_work_post 2",
+	recipe = {
+		{"mystreets:paint_brush_yellow", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"mystreets:paint_brush_yellow", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_arrow_left", {
 	description = "Arrow Left Sign",
 	tiles = {
 		"mystreets_sign_back.png",
@@ -166,7 +186,17 @@ minetest.register_node("mystreets:sign_arrow_left", {
 	},
 
 })
-minetest.register_node("mystreets:sign_arrow_left_post", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_arrow_left 1",
+	recipe = {
+		{"mystreets:paint_brush_yellow", "mystreets:ingot_galvanized_steel",""},
+		{"", "",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_arrow_left_post", {
 	description = "Arrow Left Sign With Post",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -197,7 +227,17 @@ minetest.register_node("mystreets:sign_arrow_left_post", {
 	},
 
 })
-minetest.register_node("mystreets:sign_arrow_right", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_arrow_left_post 1",
+	recipe = {
+		{"mystreets:paint_brush_yellow", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"", "",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_arrow_right", {
 	description = "Arrow Right Sign",
 	tiles = {
 		"mystreets_sign_back.png",
@@ -226,7 +266,17 @@ minetest.register_node("mystreets:sign_arrow_right", {
 	},
 
 })
-minetest.register_node("mystreets:sign_arrow_right_post", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_arrow_right 2",
+	recipe = {
+		{"", "mystreets:ingot_galvanized_steel","mystreets:paint_brush_yellow"},
+		{"", "",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_arrow_right_post", {
 	description = "Arrow Right Sign With Post",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -257,7 +307,17 @@ minetest.register_node("mystreets:sign_arrow_right_post", {
 	},
 
 })
-minetest.register_node("mystreets:sign_arrow_straight", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_arrow_right_post 1",
+	recipe = {
+		{"mystreets:lightpost", "mystreets:ingot_galvanized_steel","mystreets:paint_brush_yellow"},
+		{"", "",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_arrow_straight", {
 	description = "Arrow Straight Sign",
 	tiles = {
 		"mystreets_sign_back.png",
@@ -286,7 +346,17 @@ minetest.register_node("mystreets:sign_arrow_straight", {
 	},
 
 })
-minetest.register_node("mystreets:sign_arrow_straight_post", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_arrow_straight 2",
+	recipe = {
+		{"", "mystreets:paint_brush_yellow",""},
+		{"", "mystreets:ingot_galvanized_steel",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_arrow_straight_post", {
 	description = "Arrow Straight Sign With Post",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -317,7 +387,17 @@ minetest.register_node("mystreets:sign_arrow_straight_post", {
 	},
 
 })
-minetest.register_node("mystreets:sign_bump", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_arrow_straight_post 2",
+	recipe = {
+		{"", "mystreets:paint_brush_yellow",""},
+		{"", "mystreets:ingot_galvanized_steel",""},
+		{"", "mystreets:lightpost",""},
+	}
+})
+
+core.register_node("mystreets:sign_bump", {
 	description = "Bump  Sign",
 	tiles = {
 		"mystreets_sign_back.png",
@@ -346,7 +426,17 @@ minetest.register_node("mystreets:sign_bump", {
 	},
 
 })
-minetest.register_node("mystreets:sign_bump_post", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_bump 2",
+	recipe = {
+		{"mystreets:paint_brush_yellow", "mystreets:paint_brush_yellow",""},
+		{"mystreets:ingot_galvanized_steel", "mystreets:ingot_galvanized_steel",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_bump_post", {
 	description = "Bump  Sign With Post",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -377,7 +467,17 @@ minetest.register_node("mystreets:sign_bump_post", {
 	},
 
 })
-minetest.register_node("mystreets:sign_pedestrian_crossing", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_bump_post 2",
+	recipe = {
+		{"mystreets:paint_brush_yellow", "mystreets:paint_brush_yellow",""},
+		{"mystreets:ingot_galvanized_steel", "mystreets:ingot_galvanized_steel",""},
+		{"mystreets:lightpost", "mystreets:lightpost",""},
+	}
+})
+
+core.register_node("mystreets:sign_pedestrian_crossing", {
 	description = "Pedestrian Crossing Sign",
 	tiles = {
 		"mystreets_sign_back.png",
@@ -406,7 +506,17 @@ minetest.register_node("mystreets:sign_pedestrian_crossing", {
 	},
 
 })
-minetest.register_node("mystreets:sign_pedestrian_crossing_post", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_pedestrian_crossing 2",
+	recipe = {
+		{"mystreets:paint_brush_white", "mystreets:paint_brush_white",""},
+		{"mystreets:ingot_galvanized_steel", "mystreets:ingot_galvanized_steel",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_pedestrian_crossing_post", {
 	description = "Pedestrian Crossing Sign With Post",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -437,7 +547,16 @@ minetest.register_node("mystreets:sign_pedestrian_crossing_post", {
 	},
 
 })
-minetest.register_node("mystreets:sign_One_way_left", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_pedestrian_crossing_post 2",
+	recipe = {
+		{"mystreets:paint_brush_white", "mystreets:paint_brush_white",""},
+		{"mystreets:ingot_galvanized_steel", "mystreets:ingot_galvanized_steel",""},
+		{"mystreets:lightpost", "mystreets:lightpost",""},
+	}
+})
+core.register_node("mystreets:sign_One_way_left", {
 	description = "One Way Left Sign",
 	tiles = {
 		"mystreets_sign_back.png",
@@ -460,7 +579,17 @@ minetest.register_node("mystreets:sign_One_way_left", {
 	},
 
 })
-minetest.register_node("mystreets:sign_One_way_right", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_One_way_left 2",
+	recipe = {
+		{"mystreets:paint_brush_white", "mystreets:ingot_galvanized_steel",""},
+		{"", "",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_One_way_right", {
 	description = "One Way Right Sign",
 	tiles = {
 		"mystreets_sign_back.png",
@@ -483,7 +612,16 @@ minetest.register_node("mystreets:sign_One_way_right", {
 	},
 
 })
-minetest.register_node("mystreets:sign_One_way_left_post", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_One_way_right 2",
+	recipe = {
+		{"", "mystreets:ingot_galvanized_steel","mystreets:paint_brush_white"},
+		{"", "",""},
+		{"", "",""},
+	}
+})
+core.register_node("mystreets:sign_One_way_left_post", {
 	description = "One Way Left Sign With Post",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -508,7 +646,17 @@ minetest.register_node("mystreets:sign_One_way_left_post", {
 	},
 
 })
-minetest.register_node("mystreets:sign_One_way_right_post", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_One_way_left_post 2",
+	recipe = {
+		{"mystreets:paint_brush_white", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"", "",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_One_way_right_post", {
 	description = "One Way Right Sign With Post",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -533,7 +681,17 @@ minetest.register_node("mystreets:sign_One_way_right_post", {
 	},
 
 })
-minetest.register_node("mystreets:sign_speed_25", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_One_way_right_post 2",
+	recipe = {
+		{"mystreets:lightpost", "mystreets:ingot_galvanized_steel","mystreets:paint_brush_white"},
+		{"", "",""},
+		{"", "",""},
+	}
+})
+
+core.register_node("mystreets:sign_speed_25", {
 	description = "Speed Sign 25",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -557,7 +715,17 @@ minetest.register_node("mystreets:sign_speed_25", {
 	},
 
 })
-minetest.register_node("mystreets:sign_speed_50", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_speed_25 2",
+	recipe = {
+		{"mystreets:paint_brush_white", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"", "","mystreets:lightpost"},
+	}
+})
+
+core.register_node("mystreets:sign_speed_50", {
 	description = "Speed Sign 50",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -581,7 +749,17 @@ minetest.register_node("mystreets:sign_speed_50", {
 	},
 
 })
-minetest.register_node("mystreets:sign_speed_90", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_speed_50 2",
+	recipe = {
+		{"", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"mystreets:paint_brush_white", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"", "","mystreets:lightpost"},
+	}
+})
+
+core.register_node("mystreets:sign_speed_90", {
 	description = "Speed Sign 90",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -605,7 +783,17 @@ minetest.register_node("mystreets:sign_speed_90", {
 	},
 
 })
-minetest.register_node("mystreets:sign_speed_100", {
+--Craft
+core.register_craft({
+	output = "mystreets:sign_speed_90 2",
+	recipe = {
+		{"mystreets:paint_brush_white", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"mystreets:paint_brush_white", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"", "","mystreets:lightpost"},
+	}
+})
+
+core.register_node("mystreets:sign_speed_100", {
 	description = "Speed Sign 100",
 	tiles = {
 		"mystreets_post_tnb.png",
@@ -629,3 +817,13 @@ minetest.register_node("mystreets:sign_speed_100", {
 	},
 
 })
+--Craft
+core.register_craft({
+	output = "mystreets:sign_speed_100 2",
+	recipe = {
+		{"mystreets:paint_brush_white", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"mystreets:paint_brush_white", "mystreets:ingot_galvanized_steel","mystreets:lightpost"},
+		{"mystreets:paint_brush_white", "","mystreets:lightpost"},
+	}
+})
+

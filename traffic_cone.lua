@@ -113,3 +113,12 @@ minetest.register_node("mystreets:barrier", {
 	},
 
 })
+--Craft
+minetest.register_craft({
+	output = "mystreets:barrier 4",
+	recipe = {
+		{"mystreets:plastic","dye:orange","mystreets:plastic"},
+		{"mystreets:ingot_galvanized_steel","","mystreets:ingot_galvanized_steel"},
+		{"mystreets:ingot_galvanized_steel","","mystreets:ingot_galvanized_steel"},
+	}
+})

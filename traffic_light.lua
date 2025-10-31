@@ -72,6 +72,15 @@ minetest.register_node("mystreets:trafic_light_single", {
 		}
 	}
 })
+--craft
+minetest.register_craft({
+		output = "mystreets:trafic_light_single 1",
+		recipe = {
+			{'default:obsidian','wool:red',''},
+			{'default:torch','wool:yellow',''},
+			{'default:obsidian','wool:green',''}
+			}
+})
 
 minetest.register_node("mystreets:hazard_light", {
 	description = "Hazard Light",
@@ -101,6 +110,16 @@ minetest.register_node("mystreets:hazard_light", {
 		}
 	}
 })
+--craft
+minetest.register_craft({
+		output = "mystreets:hazard_light 1",
+		recipe = {
+			{'default:obsidian','',''},
+			{'default:torch','wool:yellow',''},
+			{'default:obsidian','',''}
+			}
+})
+
 minetest.register_node("mystreets:stop_light", {
 	description = "Stop Light",
 	tiles = {
@@ -128,4 +147,13 @@ minetest.register_node("mystreets:stop_light", {
 			{-0.1875, -0.1875, -0.1875, 0.1875, -0.125, 0.25},
 		}
 	}
+})
+--craft
+minetest.register_craft({
+		output = "mystreets:stop_light 1",
+		recipe = {
+			{'default:obsidian','',''},
+			{'default:torch','wool:red',''},
+			{'default:obsidian','',''}
+			}
 })
