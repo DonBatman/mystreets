@@ -50,7 +50,7 @@ minetest.register_node("mystreets:trafic_light_single", {
 		"tlight_tb.png",
 		"tlight_tb.png",
 		"tlight_tb.png",
-		{name="tlight_single.png", animation={type="vertical_frames",
+		{name="tlight_single1.png", animation={type="vertical_frames",
 		aspect_w=16, aspect_h=16, length=50}},
 	},
 	drawtype = "nodebox",
@@ -79,6 +79,64 @@ minetest.register_craft({
 			{'default:obsidian','wool:red',''},
 			{'default:torch','wool:yellow',''},
 			{'default:obsidian','wool:green',''}
+			}
+})
+--craft
+minetest.register_craft({
+		output = "mystreets:trafic_light_single 1",
+		recipe = {
+			{'mystreets:trafic_light_single2','',''},
+			{'','',''},
+			{'','',''}
+			}
+})
+
+minetest.register_node("mystreets:trafic_light_single2", {
+	description = "Trafic Light Single 2",
+	tiles = {
+		"tlight_tb.png",
+		"tlight_tb.png",
+		"tlight_tb.png",
+		"tlight_tb.png",
+		"tlight_tb.png",
+		{name="tlight_single2.png", animation={type="vertical_frames",
+		aspect_w=16, aspect_h=16, length=50}},
+	},
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 2},
+	light_source = 8,
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.1875, -0.4375, 0.25, 0.1875, 0.4375, 0.5},
+			{-0.25, -0.5, 0.1875, 0.25, 0.5, 0.25},
+			{-0.1875, 0.375, 0.0625, 0.1875, 0.4375, 0.1875},
+			{-0.1875, -0.375, 0.0625, 0.1875, -0.3125, 0.1875},
+			{0.125, -0.3125, 0.0625, 0.1875, 0.375, 0.1875},
+			{-0.1875, -0.3125, 0.0625, -0.125, 0.375, 0.1875},
+			{-0.1875, -0.125, 0.0625, 0.1875, -0.0625, 0.1875},
+			{-0.1875, 0.125, 0.0625, 0.1875, 0.1875, 0.1875},
+		}
+	}
+})
+--craft
+minetest.register_craft({
+		output = "mystreets:trafic_light_single2 1",
+		recipe = {
+			{'default:obsidian','wool:green',''},
+			{'default:torch','wool:yellow',''},
+			{'default:obsidian','wool:red',''}
+			}
+})
+--craft
+minetest.register_craft({
+		output = "mystreets:trafic_light_single2 1",
+		recipe = {
+			{'mystreets:trafic_light_single','',''},
+			{'','',''},
+			{'','',''}
 			}
 })
 

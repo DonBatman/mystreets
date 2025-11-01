@@ -13,7 +13,7 @@ minetest.register_alias("asphalt", "mystreets:asphalt")
 		description = "Asphalt with center dashed line",
 		tiles = {
 			"mystreets_asphalt_center_dashed.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_center_dashed.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt_center_dashed.png",
@@ -30,7 +30,7 @@ minetest.register_alias("asphalt", "mystreets:asphalt")
 	description = "Asphalt with center solid line",
 	tiles = {
 			"mystreets_asphalt_center_solid.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_center_solid.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt_center_solid.png",
@@ -48,7 +48,7 @@ minetest.register_alias("asphalt", "mystreets:asphalt")
 	description = "Asphalt with center solid dashed line",
 	tiles = {
 			"mystreets_asphalt_center_solid_dashed.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_center_solid_dashed.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt_center_solid_dashed.png^[transformR180",
@@ -66,7 +66,7 @@ minetest.register_alias("asphalt", "mystreets:asphalt")
 	description = "Asphalt with center solid double line",
 	tiles = {
 			"mystreets_asphalt_center_solid_double.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_center_solid_double.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt_center_solid_double.png",
@@ -84,7 +84,7 @@ minetest.register_alias("asphalt", "mystreets:asphalt")
 	description = "Asphalt with center corner single line",
 	tiles = {
 			"mystreets_asphalt_center_corner_single.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_center_corner_single.png^[transformFY",
 			"mystreets_asphalt_center_solid.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
@@ -102,7 +102,7 @@ minetest.register_alias("asphalt", "mystreets:asphalt")
 	description = "Asphalt with center corner double line",
 	tiles = {
 			"mystreets_asphalt_center_corner_double.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_center_corner_double.png^[transformFY",
 			"mystreets_asphalt_center_solid_double.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
@@ -120,7 +120,7 @@ minetest.register_alias("asphalt", "mystreets:asphalt")
 	description = "Asphalt with side dashed line",
 	tiles = {
 			"mystreets_asphalt_side_dashed.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_side_dashed.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt_side_dashed_inversed.png",
@@ -138,7 +138,7 @@ minetest.register_alias("asphalt", "mystreets:asphalt")
 	description = "Asphalt with side solid line",
 	tiles = {
 			"mystreets_asphalt_side_solid.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_side_solid.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt_side_solid_inversed.png",
@@ -155,7 +155,7 @@ minetest.register_node("mystreets:asphalt_center_solid", {
 	description = "Asphalt with center solid line",
 	tiles = {
 			"mystreets_asphalt_center_solid.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_center_solid.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt_center_solid.png",
@@ -172,7 +172,7 @@ minetest.register_node("mystreets:asphalt_center_solid", {
 	description = "Asphalt Outside Corner",
 	tiles = {
 			"mystreets_asphalt_ocorner.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_ocorner_inversed.png",
 			"mystreets_asphalt_side_solid_inversed.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt.png",
@@ -190,7 +190,7 @@ minetest.register_node("mystreets:asphalt_center_solid", {
 	description = "Asphalt Inside Corner",
 	tiles = {
 			"mystreets_asphalt_icorner.png",
-			"mystreets_asphalt.png",
+			"mystreets_asphalt_icorner_inversed.png",
 			"mystreets_asphalt.png",
 			"mystreets_asphalt_side_solid_inversed.png",
 			"mystreets_asphalt.png",
@@ -380,3 +380,148 @@ minetest.register_node("mystreets:asphalt_center_solid", {
 		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
+	
+-- Asphalt block with yellow side solid line
+	minetest.register_node("mystreets:asphalt_side_solid_yellow", {
+	description = "Asphalt with white side solid line",
+	tiles = {
+			"mystreets_asphalt_side_solid_yellow.png",
+			"mystreets_asphalt_side_solid_yellow.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt_side_solid_inversed_yellow.png",
+			"mystreets_asphalt_side_solid_yellow.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1, asphalt = 1},
+	sounds = default.node_sound_stone_defaults(),
+	})
+	
+-- Asphalt Yellow Outside Corner
+	minetest.register_node("mystreets:asphalt_ocorner_yellow", {
+	description = "Yellow Asphalt Outside Corner",
+	tiles = {
+			"mystreets_asphalt_ocorner_yellow.png",
+			"mystreets_asphalt_ocorner_inversed_yellow.png",
+			"mystreets_asphalt_side_solid_inversed_yellow.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt_side_solid_yellow.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1, asphalt = 1},
+	sounds = default.node_sound_stone_defaults(),
+	})
+
+-- Asphalt yellow Inside Corner
+	minetest.register_node("mystreets:asphalt_icorner_yellow", {
+	description = "Yellow Asphalt Inside Corner",
+	tiles = {
+			"mystreets_asphalt_icorner_yellow.png",
+			"mystreets_asphalt_icorner_inversed_yellow.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt_side_solid_inversed_yellow.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt_side_solid_yellow.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1, asphalt = 1},
+	sounds = default.node_sound_stone_defaults(),
+	})
+
+-- Asphalt Diagonal Line
+	minetest.register_node("mystreets:asphalt_diagonal_line", {
+	description = "Asphalt Diagonal Line",
+	tiles = {
+			"mystreets_asphalt_diagonal_line.png",
+			"mystreets_asphalt_diagonal_line.png^[transformR90",
+			"mystreets_asphalt_side_solid.png",
+			"mystreets_asphalt_side_solid.png",
+			"mystreets_asphalt_side_solid_inversed.png",
+			"mystreets_asphalt_side_solid_inversed.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1, asphalt = 1},
+	sounds = default.node_sound_stone_defaults(),
+	})
+
+-- Asphalt Yellow Diagonal Line
+	minetest.register_node("mystreets:asphalt_diagonal_line_yellow", {
+	description = "Asphalt Diagonal Line",
+	tiles = {
+			"mystreets_asphalt_diagonal_line_yellow.png",
+			"mystreets_asphalt_diagonal_line_yellow.png^[transformR90",
+			"mystreets_asphalt_side_solid_yellow.png",
+			"mystreets_asphalt_side_solid_yellow.png",
+			"mystreets_asphalt_side_solid_inversed_yellow.png",
+			"mystreets_asphalt_side_solid_inversed_yellow.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1, asphalt = 1},
+	sounds = default.node_sound_stone_defaults(),
+	})
+	
+-- Asphalt Small Inside Corner
+	minetest.register_node("mystreets:asphalt_icorner_sm", {
+	description = "Asphalt Small Inside Corner",
+	tiles = {
+			"mystreets_asphalt_ocorner_sm.png",
+			"mystreets_asphalt_ocorner_sm.png^[transformR270",
+			"mystreets_asphalt_side_solid_sm.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt_side_solid_sm.png^[transformR180",
+			"mystreets_asphalt.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1, asphalt = 1},
+	sounds = default.node_sound_stone_defaults(),
+	})
+
+-- Asphalt Rainbow Crosswalk
+	minetest.register_node("mystreets:asphalt_rainbow_crosswalk", {
+	description = "Asphalt Rainbow Crosswalk",
+	tiles = {
+			"mystreets_asphalt_rainbow_crosswalk.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1, asphalt = 1},
+	sounds = default.node_sound_stone_defaults(),
+	})
+
+-- Asphalt Crosswalk
+	minetest.register_node("mystreets:asphalt_crosswalk", {
+	description = "Asphalt Crosswalk",
+	tiles = {
+			"mystreets_asphalt_crosswalk.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png",
+			"mystreets_asphalt.png"
+	},
+	drawtype = "normal",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1, asphalt = 1},
+	sounds = default.node_sound_stone_defaults(),
+	})
+
