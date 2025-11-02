@@ -41,97 +41,28 @@ local img4 = (asphalt_blocks)[i][6]
 local img5 = (asphalt_blocks)[i][7]
 local img6 = (asphalt_blocks)[i][8]
 
--- Asphalt block
-	minetest.register_node("mystreets:"..nam, {
-		description = des,
-		tiles = {
+	stairs.register_stair_and_slab("mystreets:"..nam,
+			"mystreets:"..nam, 
+			{cracky=2}, 
+			{
 			"mystreets_asphalt"..img1,
 			"mystreets_asphalt"..img2,
 			"mystreets_asphalt"..img3,
 			"mystreets_asphalt"..img4,
 			"mystreets_asphalt"..img5,
 			"mystreets_asphalt"..img6
-		},
-		drawtype = "normal",
-		paramtype = "light",
-		paramtype2 = "facedir",
-		groups = {cracky = 1, asphalt = 1},
-		sounds = default.node_sound_stone_defaults(),
-	})
+			},
+			des.." Stairs", 
+			des.." Slab", 
+			default.node_sound_wood_defaults(),  
+			{
+			"mystreets_asphalt"..img1,
+			"mystreets_asphalt"..img2,
+			"mystreets_asphalt"..img3,
+			"mystreets_asphalt"..img4,
+			"mystreets_asphalt"..img5,
+			"mystreets_asphalt"..img6
+			},
+			des.." Inner Stairs", 
+			des.." Outer Stairs")
 end
-minetest.register_alias("asphalt", "mystreets:asphalt")
-
--- Asphalt Pothole
-minetest.register_node("mystreets:pothole1", {
-	description = "Pothole",
-	tiles = {
-			"mystreets_asphalt_pothole.png",
-			"mystreets_asphalt.png",
-			"mystreets_asphalt.png",
-			"mystreets_asphalt.png",
-			"mystreets_asphalt.png",
-			"mystreets_asphalt.png"
-	},
-	drawtype = "nodebox",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	groups = {cracky = 1, asphalt = 1},
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, -0.5, 0.5, 0.5, -0.375},
-			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.5},
-			{-0.5, -0.5, -0.5, -0.375, 0.5, 0.5},
-			{0.375, -0.5, -0.5, 0.5, 0.5, 0.5},
-			{0.25, -0.5, 0.1875, 0.5, 0.5, 0.5},
-			{0.125, -0.5, -0.5, 0.5, 0.5, -0.25},
-			{0.1875, -0.5, -0.5, 0.5, 0.5, -0.1875},
-			{-0.5, -0.5, 0.3125, -0.1875, 0.5, 0.5},
-			{-0.5, -0.5, 0.1875, -0.3125, 0.5, 0.5},
-			{-0.5, -0.5, -0.5, -0.3125, 0.5, -0.125},
-			{-0.5, -0.5, -0.5, -0.1875, 0.5, -0.25},
-			{-0.5, -0.5, -0.5, -0.125, 0.4375, -0.125},
-			{-0.5, -0.5, -0.5, 0.3125, 0.4375, -0.25},
-			{0.25, -0.5, -0.5, 0.5, 0.4375, 0.5},
-			{0.125, -0.5, -0.5, 0.5, 0.4375, -0.125},
-			{-0.5, -0.5, 0.25, 0.5, 0.4375, 0.5},
-			{0.1875, -0.5, 0.125, 0.5, 0.4375, 0.5},
-			{-0.5, -0.5, -0.5, -0.3125, 0.4375, 0.5},
-			{-0.5, -0.5, 0.125, -0.1875, 0.4375, 0.5},
-			{-0.5, -0.5, -0.5, 0.5, 0.375, 0.5},
-		}
-	}
-})
-
--- Asphalt Pothole
-minetest.register_node("mystreets:pothole2", {
-	description = "Pothole",
-	tiles = {
-			"mystreets_asphalt_pothole2.png",
-			"mystreets_asphalt.png",
-			"mystreets_asphalt.png",
-			"mystreets_asphalt.png",
-			"mystreets_asphalt.png",
-			"mystreets_asphalt.png"
-	},
-	drawtype = "nodebox",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	groups = {cracky = 1, asphalt = 1},
-	sounds = default.node_sound_stone_defaults(),
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, -0.5, -0.125, 0.5, -0.125},
-			{-0.5, -0.5, -0.5, 0.3125, 0.5, -0.25},
-			{0.25, -0.5, -0.5, 0.5, 0.5, 0.5},
-			{0.125, -0.5, -0.5, 0.5, 0.5, -0.125},
-			{-0.5, -0.5, 0.25, 0.5, 0.5, 0.5},
-			{0.1875, -0.5, 0.125, 0.5, 0.5, 0.5},
-			{-0.5, -0.5, -0.5, -0.3125, 0.5, 0.5},
-			{-0.5, -0.5, 0.125, -0.1875, 0.5, 0.5},
-			{-0.5, -0.5, -0.5, 0.5, 0.4375, 0.5},
-		}
-	}
-})

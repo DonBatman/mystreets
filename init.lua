@@ -1,23 +1,27 @@
+local use_stairs = core.settings:get_bool("mystreets.stairs", false)
+if use_stairs then
+dofile(minetest.get_modpath("mystreets").."/stairs.lua")
+end
 
 dofile(minetest.get_modpath("mystreets").."/asphalt.lua")
 dofile(minetest.get_modpath("mystreets").."/asphalt_crafts.lua")
+dofile(minetest.get_modpath("mystreets").."/billboard.lua")
 dofile(minetest.get_modpath("mystreets").."/lights.lua")
+dofile(minetest.get_modpath("mystreets").."/manholes.lua")
 dofile(minetest.get_modpath("mystreets").."/mapgen.lua")
 dofile(minetest.get_modpath("mystreets").."/oil.lua")
+dofile(minetest.get_modpath("mystreets").."/ores.lua")
 dofile(minetest.get_modpath("mystreets").."/paint.lua")
+dofile(minetest.get_modpath("mystreets").."/plastic.lua")
 dofile(minetest.get_modpath("mystreets").."/posts.lua")
-dofile(minetest.get_modpath("mystreets").."/ramps.lua")	
+dofile(minetest.get_modpath("mystreets").."/powerpoles.lua")
+dofile(minetest.get_modpath("mystreets").."/railroad_crossing.lua")
+dofile(minetest.get_modpath("mystreets").."/ramps.lua")
+dofile(minetest.get_modpath("mystreets").."/sewerwater.lua")
 dofile(minetest.get_modpath("mystreets").."/steel.lua")
 dofile(minetest.get_modpath("mystreets").."/streetsigns.lua")
-dofile(minetest.get_modpath("mystreets").."/traffic_light.lua")	
-dofile(minetest.get_modpath("mystreets").."/manholes.lua")	
-dofile(minetest.get_modpath("mystreets").."/sewerwater.lua")
-dofile(minetest.get_modpath("mystreets").."/ores.lua")
-dofile(minetest.get_modpath("mystreets").."/powerpoles.lua")
-dofile(minetest.get_modpath("mystreets").."/billboard.lua")	
-dofile(minetest.get_modpath("mystreets").."/railroad_crossing.lua")	
-dofile(minetest.get_modpath("mystreets").."/traffic_cone.lua")	
-dofile(minetest.get_modpath("mystreets").."/plastic.lua")
+dofile(minetest.get_modpath("mystreets").."/traffic_cone.lua")
+dofile(minetest.get_modpath("mystreets").."/traffic_light.lua")
 print("mystreets mod loaded succesfully!")
 
 if minetest.get_modpath("myconcrete") then
@@ -47,3 +51,5 @@ minetest.register_alias("myconcrete:ramp_concrete", "mystreets:ramp_concrete")
 minetest.register_alias("myconcrete:ramp_concrete_long", "mystreets:ramp_concrete_long")
 
 end
+
+

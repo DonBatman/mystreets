@@ -18,7 +18,16 @@ minetest.register_craft({
 		{"", "",""},
 	}
 })
-
+	stairs.register_stair_and_slab("mystreets:sidewalk",
+			"mystreets:sidewalk", 
+			{cracky=2}, 
+			{"mystreets_sidewalk.png"},
+			"Sidewalk Stairs", 
+			"Sidewalk Slab", 
+			default.node_sound_wood_defaults(),  
+			{"mystreets_sidewalk.png"},
+			"Sidewalk Inner Stairs", 
+			"Sidewalk Outer Stairs")
 --Concrete
 minetest.register_node("mystreets:concrete", {
 	description = "Concrete",
@@ -40,6 +49,16 @@ minetest.register_craft({
 		{"", "",""},
 	}
 })
+	stairs.register_stair_and_slab("mystreets:concrete",
+			"mystreets:concrete", 
+			{cracky=2}, 
+			{"mystreets_concrete.png"},
+			"Concrete Stairs", 
+			"Concrete Slab", 
+			default.node_sound_wood_defaults(),  
+			{"mystreets_sidewalk.png"},
+			"Concrete Inner Stairs", 
+			"Concrete Outer Stairs")
 
 -- Concrete fence
 	minetest.register_node("mystreets:fence_concrete", {
