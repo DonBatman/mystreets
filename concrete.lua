@@ -1,3 +1,31 @@
+local slope_cbox_long3 = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -2.5, 0.5, -0.4375, 0.5},
+			{-0.5, -0.5, -2.1875, 0.5, -0.3125, 0.5},
+			{-0.5, -0.5, -1.75, 0.5, -0.1875, 0.5},
+			{-0.5, -0.5, -1.375, 0.5, -0.0625, 0.5},
+			{-0.5, -0.5, -0.9375, 0.5, 0.0625, 0.5},
+			{-0.5, -0.5, -0.5625, 0.5, 0.1875, 0.5},
+			{-0.5, -0.5, -0.1875, 0.5, 0.3125, 0.5},
+			{-0.5, -0.5, 0.1875, 0.5, 0.4375, 0.5},
+	}
+}
+
+local slope_cbox_long4 = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -3.5, 0.5, -0.4375, 0.5},
+			{-0.5, -0.5, -3, 0.5, -0.3125, 0.5},
+			{-0.5, -0.5, -2.5, 0.5, -0.1875, 0.5},
+			{-0.5, -0.5, -2, 0.5, -0.0625, 0.5},
+			{-0.5, -0.5, -1.5, 0.5, 0.0625, 0.5},
+			{-0.5, -0.5, -1, 0.5, 0.1875, 0.5},
+			{-0.5, -0.5, -0.5, 0.5, 0.3125, 0.5},
+			{-0.5, -0.5, -0, 0.5, 0.4375, 0.5},
+	}
+}
+
 --Sidewalk
 minetest.register_node("mystreets:sidewalk", {
 	description = "Sidewalk",
@@ -224,6 +252,50 @@ minetest.register_craft({
 	recipe = {
 		{"", "",""},
 		{"", "","mystreets:sidewalk"},
+		{"mystreets:sidewalk", "mystreets:sidewalk","mystreets:sidewalk"},
+	}
+})
+minetest.register_node("mystreets:ramp_sidewalk3", {
+	description = "Sidewalk Ramp 3",
+	drawtype = "mesh",
+	mesh = "mystreets_slope_long3.obj",
+	tiles = {"mystreets_sidewalk.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1},
+	sounds = default.node_sound_wood_defaults(),
+	on_place = minetest.rotate_node,
+	collision_box = slope_cbox_long3,
+	selection_box = slope_cbox_long3
+})
+--Craft
+minetest.register_craft({
+	output = "mystreets:ramp_sidewalk3 2",
+	recipe = {
+		{"", "",""},
+		{"", "mystreets:sidewalk","mystreets:sidewalk"},
+		{"mystreets:sidewalk", "mystreets:sidewalk","mystreets:sidewalk"},
+	}
+})
+minetest.register_node("mystreets:ramp_sidewalk4", {
+	description = "Sidewalk Ramp 4",
+	drawtype = "mesh",
+	mesh = "mystreets_slope_long4.obj",
+	tiles = {"mystreets_sidewalk.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky = 1},
+	sounds = default.node_sound_wood_defaults(),
+	on_place = minetest.rotate_node,
+	collision_box = slope_cbox_long4,
+	selection_box = slope_cbox_long4
+})
+--Craft
+minetest.register_craft({
+	output = "mystreets:ramp_sidewalk4 2",
+	recipe = {
+		{"", "","mystreets:sidewalk"},
+		{"", "mystreets:sidewalk","mystreets:sidewalk"},
 		{"mystreets:sidewalk", "mystreets:sidewalk","mystreets:sidewalk"},
 	}
 })
