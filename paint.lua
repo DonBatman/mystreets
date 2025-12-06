@@ -23,14 +23,14 @@ for i in ipairs(dye_colour) do
 	local colour = dye_colour[i][2]
 
 --Paint Brush
-minetest.register_craftitem("mystreets:paint_brush", {
+core.register_craftitem("mystreets:paint_brush", {
 	description = "Paint Brush",
 	inventory_image = "mystreets_paint_brush.png",
 
 })
 
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:paint_brush 9",
 	recipe = {
 		{"wool:white"},
@@ -40,13 +40,13 @@ minetest.register_craft({
 })
 
 --Paint Brush colored
-minetest.register_craftitem("mystreets:paint_brush_"..colour.."", {
+core.register_craftitem("mystreets:paint_brush_"..colour.."", {
 	description = "Paint Brush "..pcolour,
 	inventory_image = "mystreets_paint_brush_"..colour..".png",
 
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:paint_brush_"..colour.." 9",
 	recipe = {
 		{"mystreets:paint_brush", "mystreets:paint_"..colour..""}
@@ -55,13 +55,13 @@ minetest.register_craft({
 
 --Paint White
 
-minetest.register_craftitem("mystreets:paint_"..colour.."", {
+core.register_craftitem("mystreets:paint_"..colour.."", {
 	description = "Paint "..pcolour,
 	inventory_image = "mystreets_paint_can_"..colour..".png",
 
 })
 --[[
-minetest.register_node("mystreets:paint_"..colour.."", {
+core.register_node("mystreets:paint_"..colour.."", {
 	description = " Paint Can",
 	drawtype = "mesh",
 	mesh = "slope_test_cylinder.obj",
@@ -71,11 +71,11 @@ minetest.register_node("mystreets:paint_"..colour.."", {
 	visual_scale = 0.5,
 	groups = {choppy=2, oddly_breakable_by_hand=2},
 	sounds = default.node_sound_wood_defaults(),
---	on_place = minetest.rotate_node,
+--	on_place = core.rotate_node,
 })
 --]]
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:paint_"..colour.." 9",
 	recipe = {
 		{"mystreets:bucket_oil", "dye:"..colour..""}

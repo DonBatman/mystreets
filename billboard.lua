@@ -1,4 +1,4 @@
-minetest.register_node("mystreets:billboard", {
+core.register_node("mystreets:billboard", {
 	description = "Billboard",
 	tiles = {
 		"mystreets_billboard.png",
@@ -25,10 +25,10 @@ minetest.register_node("mystreets:billboard", {
 		}
 	},
 	
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 	--Add checks for each side and top
 })
-minetest.register_node("mystreets:billboard_post", {
+core.register_node("mystreets:billboard_post", {
 	description = "Billboard",
 	tiles = {
 		"mystreets_power_pole.png",
@@ -50,10 +50,10 @@ minetest.register_node("mystreets:billboard_post", {
 		}
 	},
 	
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Crafting
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:billboard_post 8",
 	recipe = {
 		{"","",""},
@@ -61,7 +61,7 @@ minetest.register_craft({
 		{"","group:tree",""},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:billboard 3",
 	recipe = {
 		{"","group:wood",""},

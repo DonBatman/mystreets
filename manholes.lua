@@ -10,7 +10,7 @@
 				node.name = "mystreets:manhole_cover_opened"
 				node.param2 = state
 			end
-			minetest.env:add_node(pos, {
+			core.env:add_node(pos, {
 				name = node.name,
 				param2 = node.param2
 			})
@@ -18,7 +18,7 @@
 
 	end
 
-minetest.register_node("mystreets:manhole_cover_closed", {
+core.register_node("mystreets:manhole_cover_closed", {
 		description = "Manhole cover",
 		tiles = {
 			"mystreets_manhole_cover_top_bottom.png",
@@ -56,7 +56,7 @@ minetest.register_node("mystreets:manhole_cover_closed", {
 		on_punch = on_manhole_cover_punched
 	})
 
-	minetest.register_node("mystreets:manhole_cover_opened", {
+	core.register_node("mystreets:manhole_cover_opened", {
 		tiles = {
 			"mystreets_manhole_cover_side.png",
 			"mystreets_manhole_cover_side.png",
@@ -92,43 +92,25 @@ minetest.register_node("mystreets:manhole_cover_closed", {
 
 		on_punch = on_manhole_cover_punched
 	})
-minetest.register_node("mystreets:grate", {
+core.register_node("mystreets:grate", {
 	description = "Grate",
 	tiles = {
 			"mystreets_concrete.png",
-			"mystreets_concrete.png",
-			"mystreets_concrete.png",
-			"mystreets_concrete.png",
-			"mystreets_concrete.png",
-			"mystreets_concrete.png"
 		},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_grate.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky=2},
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, -0.5, -0.4375, -0.4375, 0.5},
-			{0.4375, -0.5, -0.5, 0.5, -0.4375, 0.5}, 
-			{-0.5, -0.5, 0.4375, 0.5, -0.4375, 0.5},
-			{-0.5, -0.5, -0.5, 0.5, -0.4375, -0.4375}, 
-			{-0.5, -0.5, -0.375, 0.5, -0.4375, -0.3125},
-			{-0.5, -0.5, -0.25, 0.5, -0.4375, -0.1875}, 
-			{-0.5, -0.5, -0.125, 0.5, -0.4375, -0.0625},
-			{-0.5, -0.5, 0.3125, 0.5, -0.4375, 0.375}, 
-			{-0.5, -0.5, 0.1875, 0.5, -0.4375, 0.25}, 
-			{-0.5, -0.5, 0.0625, 0.5, -0.4375, 0.125}, 
-			}
-		},
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -0.4375, 0.5}
 		},
+	on_place = core.rotate_node,
 
 	})
 
-minetest.register_node("mystreets:manhole", {
+core.register_node("mystreets:manhole", {
 	description = "Manhole",
 	tiles = {
 			"mystreets_manhole_top_closed.png",
@@ -193,12 +175,12 @@ minetest.register_node("mystreets:manhole", {
 		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
 		},
 	on_punch = function(pos, node, puncher, pointed_thing)
-		minetest.set_node(pos,{name = "mystreets:manhole_open", param2 = node.param2})
+		core.set_node(pos,{name = "mystreets:manhole_open", param2 = node.param2})
 	end,
 	})
 
 --Manhole open
-minetest.register_node("mystreets:manhole_open", {
+core.register_node("mystreets:manhole_open", {
 --	description = "Manhole Open",
 	tiles = {
 			"mystreets_manhole_top_closed.png",
@@ -263,19 +245,19 @@ minetest.register_node("mystreets:manhole_open", {
 		fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}
 		},
 	on_punch = function(pos, node, puncher, pointed_thing)
-		minetest.set_node(pos,{name = "mystreets:manhole", param2 = node.param2})
+		core.set_node(pos,{name = "mystreets:manhole", param2 = node.param2})
 	end,
 	on_construct = function(pos)
-		local timer = minetest.get_node_timer(pos)
+		local timer = core.get_node_timer(pos)
 		timer:start(10)
 	end,
 	on_timer = function(pos, elapsed)
-		minetest.set_node(pos,{name = "mystreets:manhole"})
+		core.set_node(pos,{name = "mystreets:manhole"})
 	end,
 	})
 
 --Manhole shaft
-minetest.register_node("mystreets:manhole_shaft", {
+core.register_node("mystreets:manhole_shaft", {
 	description = "Manhole Shaft",
 	tiles = {
 			"mystreets_concrete.png",
@@ -326,7 +308,7 @@ minetest.register_node("mystreets:manhole_shaft", {
 
 	})
 --Crafting
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:grate 6",
 	recipe = {
 		{"default:steel_ingot", "mystreets:ingot_lead",""},
@@ -334,7 +316,7 @@ minetest.register_craft({
 		{"default:steel_ingot", "mystreets:ingot_lead",""},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:manhole 6",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:grate","mystreets:asphalt"},
@@ -342,7 +324,7 @@ minetest.register_craft({
 		{"", "",""},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:manhole_cover_closed 6",
 	recipe = {
 		{"default:steel_ingot", "default:steel_ingot","default:steel_ingot"},
@@ -350,7 +332,7 @@ minetest.register_craft({
 		{"", "",""},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:manhole_shaft 6",
 	recipe = {
 		{"mystreets:concrete", "","mystreets:concrete"},

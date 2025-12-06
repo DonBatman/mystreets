@@ -1,19 +1,15 @@
 --post
-minetest.register_node("mystreets:lightpost", {
+core.register_node("mystreets:lightpost", {
 	description = "Light Post",
 	tiles = {
-		"mystreets_post_tnb.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
@@ -21,10 +17,10 @@ minetest.register_node("mystreets:lightpost", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost 3",
 	recipe = {
 		{"mystreets:hardened_steel"},
@@ -34,21 +30,17 @@ minetest.register_craft({
 })
 
 --post L
-minetest.register_node("mystreets:lightpost_l", {
+core.register_node("mystreets:lightpost_l", {
 	description = "Light Post L",
 	tiles = {
-		"mystreets_post_hor.png",
-		"mystreets_post_hor.png",
-		"mystreets_post_corner1.png",
-		"mystreets_post_corner2.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_l.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.0625, -0.5, -0.125, 0.0625, 0.0625, 0.125},
@@ -58,10 +50,10 @@ minetest.register_node("mystreets:lightpost_l", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost_l 3",
 	recipe = {
 		{"mystreets:lightpost","mystreets:lightpost",""},
@@ -71,21 +63,17 @@ minetest.register_craft({
 })
 
 --post base
-minetest.register_node("mystreets:lightpost_base", {
+core.register_node("mystreets:lightpost_base", {
 	description = "Light Post Base",
 	tiles = {
-		"mystreets_post_tnb.png",
-		"mystreets_post_tnb.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_base.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.0625, -0.5, -0.125, 0.0625, 0.5, 0.125},
@@ -96,10 +84,10 @@ minetest.register_node("mystreets:lightpost_base", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost_base 4",
 	recipe = {
 		{"","mystreets:lightpost",""},
@@ -109,21 +97,17 @@ minetest.register_craft({
 })
 
 --post t
-minetest.register_node("mystreets:lightpost_t", {
+core.register_node("mystreets:lightpost_t", {
 	description = "Light Post T",
 	tiles = {
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_t.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.0625, -0.125, -0.5, 0.0625, 0.125, 0.5},
@@ -133,10 +117,10 @@ minetest.register_node("mystreets:lightpost_t", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost_t 5",
 	recipe = {
 		{"","mystreets:lightpost",""},
@@ -146,21 +130,17 @@ minetest.register_craft({
 })
 
 --post all
-minetest.register_node("mystreets:lightpost_all", {
+core.register_node("mystreets:lightpost_all", {
 	description = "Light Post All Directions",
 	tiles = {
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_all.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.0625, -0.125, -0.5, 0.0625, 0.125, 0.5},
@@ -172,10 +152,10 @@ minetest.register_node("mystreets:lightpost_all", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost_all 9",
 	recipe = {
 		{"mystreets:lightpost","mystreets:lightpost","mystreets:lightpost"},
@@ -185,21 +165,17 @@ minetest.register_craft({
 })
 
 --post all -1
-minetest.register_node("mystreets:lightpost_allless1", {
+core.register_node("mystreets:lightpost_allless1", {
 	description = "Light Post All Directions -1",
 	tiles = {
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_allless1.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.0625, -0.125, -0.5, 0.0625, 0.125, 0.5},
@@ -211,10 +187,10 @@ minetest.register_node("mystreets:lightpost_allless1", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost_allless1 8",
 	recipe = {
 		{"mystreets:lightpost","mystreets:lightpost","mystreets:lightpost"},
@@ -224,21 +200,17 @@ minetest.register_craft({
 })
 
 --post y
-minetest.register_node("mystreets:lightpost_y", {
+core.register_node("mystreets:lightpost_y", {
 	description = "Light Post Y",
 	tiles = {
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_y.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.0625, -0.125, -0.5, 0.0625, 0.125, 0.0625},
@@ -248,10 +220,10 @@ minetest.register_node("mystreets:lightpost_y", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost_y 4",
 	recipe = {
 		{"mystreets:lightpost","","mystreets:lightpost"},
@@ -261,21 +233,17 @@ minetest.register_craft({
 })
 
 --post 3 way corner
-minetest.register_node("mystreets:lightpost_3corner", {
+core.register_node("mystreets:lightpost_3corner", {
 	description = "Light Post 3 Way Corner",
 	tiles = {
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_3corner.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.0625, -0.125, -0.5, 0.0625, 0.125, 0.0625},
@@ -287,10 +255,10 @@ minetest.register_node("mystreets:lightpost_3corner", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost_3corner 4",
 	recipe = {
 		{"mystreets:lightpost","mystreets:lightpost",""},
@@ -301,13 +269,13 @@ minetest.register_craft({
 
 
 --Hardened Steel
-minetest.register_craftitem("mystreets:hardened_steel", {
+core.register_craftitem("mystreets:hardened_steel", {
 	description = "Hardened Steel",
 	inventory_image = "mystreets_hardened_steel.png",
 
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 		type = "cooking",
 		output = "mystreets:hardened_steel",
 		recipe = "default:steel_ingot",
@@ -317,18 +285,14 @@ minetest.register_craft({
 minetest.register_node("mystreets:lightpost_3cornernt", {
 	description = "Light Post 3 Way Corner No Top",
 	tiles = {
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_3corner2.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.125, -0.5, -0.0625, 0.125, 0.0625, 0.0625},
@@ -351,21 +315,18 @@ minetest.register_craft({
 		{"","mystreets:lightpost",""},
 	}
 })
-minetest.register_node("mystreets:lightpost_4cornernt", {
+
+core.register_node("mystreets:lightpost_4cornernt", {
 	description = "Light Post 3 Way Corner No Top",
 	tiles = {
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png",
-		"mystreets_post_vert.png"
+		"mystreets_lightpost.png",
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_lightpost_4corner.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
 			{-0.125, -0.5, -0.0625, 0.125, 0.0625, 0.0625},
@@ -377,10 +338,10 @@ minetest.register_node("mystreets:lightpost_4cornernt", {
 		}
 	},
 
-	on_place = minetest.rotate_node
+	on_place = core.rotate_node
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:lightpost_4cornernt 6",
 	recipe = {
 		{"mystreets:lightpost","mystreets:lightpost",""},

@@ -1,6 +1,6 @@
 ----------ZINC--------
 --Ore In Stone
-minetest.register_node("mystreets:zinc", {
+core.register_node("mystreets:zinc", {
 	description = ("Zinc Ore"),
 	tiles = {"default_stone.png^mystreets_instone_zinc.png"},
 	groups = {cracky = 2},
@@ -8,7 +8,7 @@ minetest.register_node("mystreets:zinc", {
 	sounds = default.node_sound_stone_defaults(),
 })
 --Block
-minetest.register_node("mystreets:block_zinc", {
+core.register_node("mystreets:block_zinc", {
 	description = ("Zinc Block"),
 	tiles = {"mystreets_block_zinc.png"},
 	is_ground_content = false,
@@ -16,17 +16,17 @@ minetest.register_node("mystreets:block_zinc", {
 	sounds = default.node_sound_metal_defaults(),
 })
 --Lump
-minetest.register_craftitem("mystreets:lump_zinc", {
+core.register_craftitem("mystreets:lump_zinc", {
 	description = ("Zinc Lump"),
 	inventory_image = "mystreets_lump_zinc.png"
 })
 --Ingot
-minetest.register_craftitem("mystreets:ingot_zinc", {
+core.register_craftitem("mystreets:ingot_zinc", {
 	description = ("Zinc Ingot"),
 	inventory_image = "mystreets_ingot_zinc.png"
 })
 --Crafting
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:block_zinc",
 	recipe = {
 		{"mystreets:ingot_zinc","mystreets:ingot_zinc","mystreets:ingot_zinc"},
@@ -34,13 +34,13 @@ minetest.register_craft({
 		{"mystreets:ingot_zinc","mystreets:ingot_zinc","mystreets:ingot_zinc"},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	type = "cooking",
 	output = "mystreets:ingot_zinc",
 	recipe = "mystreets:lump_zinc",
 })
 --Mapgen
-	minetest.register_ore({
+	core.register_ore({
 		ore_type        = "scatter",
 		ore             = "mystreets:zinc",
 		wherein         = {"default:stone"},
@@ -54,7 +54,7 @@ minetest.register_craft({
 
 -------LEAD-------
 --Ore In Stone
-minetest.register_node("mystreets:lead", {
+core.register_node("mystreets:lead", {
 	description = ("Lead Ore"),
 	tiles = {"default_stone.png^mystreets_instone_lead.png"},
 	groups = {cracky = 2},
@@ -62,7 +62,7 @@ minetest.register_node("mystreets:lead", {
 	sounds = default.node_sound_stone_defaults(),
 })
 --Block
-minetest.register_node("mystreets:block_lead", {
+core.register_node("mystreets:block_lead", {
 	description = ("Lead Block"),
 	tiles = {"mystreets_block_lead.png"},
 	is_ground_content = false,
@@ -70,17 +70,17 @@ minetest.register_node("mystreets:block_lead", {
 	sounds = default.node_sound_metal_defaults(),
 })
 --Lump
-minetest.register_craftitem("mystreets:lump_lead", {
+core.register_craftitem("mystreets:lump_lead", {
 	description = ("Lead Lump"),
 	inventory_image = "mystreets_lump_lead.png"
 })
 --Ingot
-minetest.register_craftitem("mystreets:ingot_lead", {
+core.register_craftitem("mystreets:ingot_lead", {
 	description = ("Lead Ingot"),
 	inventory_image = "mystreets_ingot_lead.png"
 })
 --Crafting
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:block_lead",
 	recipe = {
 		{"mystreets:ingot_lead","mystreets:ingot_lead","mystreets:ingot_lead"},
@@ -88,13 +88,13 @@ minetest.register_craft({
 		{"mystreets:ingot_lead","mystreets:ingot_lead","mystreets:ingot_lead"},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	type = "cooking",
 	output = "mystreets:ingot_lead",
 	recipe = "mystreets:lump_lead",
 })
 --Mapgen
-	minetest.register_ore({
+	core.register_ore({
 		ore_type        = "scatter",
 		ore             = "mystreets:lead",
 		wherein         = {"default:stone"},
@@ -108,7 +108,7 @@ minetest.register_craft({
 
 -------NICKLE-------
 --Ore In Stone
-minetest.register_node("mystreets:nickel", {
+core.register_node("mystreets:nickel", {
 	description = ("Nickel Ore"),
 	tiles = {"default_stone.png^mystreets_instone_nickel.png"},
 	groups = {cracky = 2},
@@ -116,7 +116,7 @@ minetest.register_node("mystreets:nickel", {
 	sounds = default.node_sound_stone_defaults(),
 })
 --Block
-minetest.register_node("mystreets:block_nickel", {
+core.register_node("mystreets:block_nickel", {
 	description = ("Nickel Block"),
 	tiles = {"mystreets_block_nickel.png"},
 	is_ground_content = false,
@@ -124,17 +124,17 @@ minetest.register_node("mystreets:block_nickel", {
 	sounds = default.node_sound_metal_defaults(),
 })
 --Lump
-minetest.register_craftitem("mystreets:lump_nickel", {
+core.register_craftitem("mystreets:lump_nickel", {
 	description = ("Nickel Lump"),
 	inventory_image = "mystreets_lump_nickel.png"
 })
 --Ingot
-minetest.register_craftitem("mystreets:ingot_nickel", {
+core.register_craftitem("mystreets:ingot_nickel", {
 	description = ("Nickel Ingot"),
 	inventory_image = "mystreets_ingot_nickel.png"
 })
 --Crafting
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:block_nickel",
 	recipe = {
 		{"mystreets:ingot_nickel","mystreets:ingot_nickel","mystreets:ingot_nickel"},
@@ -142,13 +142,13 @@ minetest.register_craft({
 		{"mystreets:ingot_nickel","mystreets:ingot_nickel","mystreets:ingot_nickel"},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	type = "cooking",
 	output = "mystreets:ingot_nickel",
 	recipe = "mystreets:lump_nickel",
 })
 --Mapgen
-	minetest.register_ore({
+	core.register_ore({
 		ore_type        = "scatter",
 		ore             = "mystreets:nickel",
 		wherein         = {"default:stone"},
@@ -162,7 +162,7 @@ minetest.register_craft({
 --Brass
 
 --Block
-minetest.register_node("mystreets:block_brass", {
+core.register_node("mystreets:block_brass", {
 	description = ("Brass Block"),
 	tiles = {"mystreets_block_brass.png"},
 	is_ground_content = false,
@@ -170,19 +170,19 @@ minetest.register_node("mystreets:block_brass", {
 	sounds = default.node_sound_metal_defaults(),
 })
 --Ingot
-minetest.register_craftitem("mystreets:ingot_brass", {
+core.register_craftitem("mystreets:ingot_brass", {
 	description = ("brass Ingot"),
 	inventory_image = "mystreets_ingot_brass.png"
 })
 --Crafting
-minetest.register_craft({
+core.register_craft({
 	type = "shapeless",
 	output = "mystreets:ingot_brass",
 	recipe = {
 		"mystreets:ingot_zinc","default:copper_ingot"
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:block_brass",
 	recipe = {
 		{"mystreets:ingot_brass","mystreets:ingot_brass","mystreets:ingot_brass"},

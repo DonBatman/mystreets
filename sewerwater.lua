@@ -1,6 +1,6 @@
-minetest.register_node("mystreets:sewer_water", {
+core.register_node("mystreets:sewer_water", {
 	description = "Sewer Water",
-	inventory_image = minetest.inventorycube("mystreets_sewerwater_inv.png"),
+	inventory_image = core.inventorycube("mystreets_sewerwater_inv.png"),
 	drawtype = "liquid",
 	tiles = {"mystreets_sewerwater.png", },
 	use_texture_alpha = "clip",
@@ -21,9 +21,9 @@ minetest.register_node("mystreets:sewer_water", {
 	post_effect_color = {a=180, r=25, g=40, b=1},
 	groups = {liquid=2},
 })
-minetest.register_node("mystreets:sewer_water_flowing", {
+core.register_node("mystreets:sewer_water_flowing", {
 	description = "Flowing Sewer Water",
-	inventory_image = minetest.inventorycube("mystreets_sewerwater_inv.png"),
+	inventory_image = core.inventorycube("mystreets_sewerwater_inv.png"),
 	drawtype = "flowingliquid",
 	tiles = {"mystreets_sewerwater.png"},
 	special_tiles = {"mystreets_sewerwater.png"},
@@ -47,7 +47,7 @@ minetest.register_node("mystreets:sewer_water_flowing", {
 	groups = {liquid=2, not_in_creative_inventory=1},
 })
 --Crafting
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:sewer_water 3",
 	recipe = {
 		{"bucket:bucket_water", "",""},

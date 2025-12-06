@@ -1,12 +1,12 @@
 --Asphalt
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt 2",
 	recipe = {
 		{"default:gravel", "mystreets:tar"},
 	}
 })
 --Asphalt Center Dashed
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_center_dashed 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:paint_brush_yellow","mystreets:asphalt"},
@@ -15,7 +15,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Center Solid
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_center_solid 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:paint_brush_yellow","mystreets:asphalt"},
@@ -24,7 +24,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Center Solid Dashed
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_center_solid_dashed 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:paint_brush_yellow","mystreets:paint_brush_yellow"},
@@ -33,7 +33,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Center Solid Double
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_center_solid_double 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:paint_brush_yellow","mystreets:paint_brush_yellow"},
@@ -42,7 +42,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Center Single Corner
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_center_corner_single 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:asphalt"},
@@ -51,7 +51,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Center Double Corner
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_center_corner_double 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:asphalt"},
@@ -60,7 +60,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Side Dashed
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_side_dashed 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_white"},
@@ -69,7 +69,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Side Solid
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_side_solid 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_white"},
@@ -78,7 +78,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Side Solid Yellow
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_side_solid_yellow 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_yellow"},
@@ -87,7 +87,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Outside Corner
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_ocorner 9",
 	recipe = {
 		{"mystreets:paint_brush_white", "mystreets:paint_brush_white","mystreets:paint_brush_white"},
@@ -96,7 +96,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Outside Corner Yellow
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_ocorner_yellow 9",
 	recipe = {
 		{"mystreets:paint_brush_yellow", "mystreets:paint_brush_yellow","mystreets:paint_brush_yellow"},
@@ -105,7 +105,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Inside Corner
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_icorner 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_white"},
@@ -114,7 +114,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Inside Corner Small
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_icorner_sm 4",
 	recipe = {
 		{"", "mystreets:asphalt","mystreets:paint_brush_white"},
@@ -123,7 +123,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Inside Corner Yellow
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_icorner_yellow 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_yellow"},
@@ -132,7 +132,7 @@ minetest.register_craft({
 	}
 })
 --Handicap Top Left
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_hc_tl 4",
 	recipe = {
 		{"mystreets:paint_brush_blue", "mystreets:paint_brush_white",""},
@@ -141,7 +141,7 @@ minetest.register_craft({
 	}
 })
 --Handicap Top Right
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_hc_tr 4",
 	recipe = {
 		{"mystreets:paint_brush_blue", "mystreets:paint_brush_blue",""},
@@ -150,7 +150,7 @@ minetest.register_craft({
 	}
 })
 --Handicap Bottom Right
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_hc_br 4",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:paint_brush_blue",""},
@@ -159,7 +159,7 @@ minetest.register_craft({
 	}
 })
 --Handicap Bottom Left
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_hc_bl 4",
 	recipe = {
 		{"mystreets:paint_brush_white", "mystreets:asphalt",""},
@@ -168,7 +168,7 @@ minetest.register_craft({
 	}
 })
 --Turn Arrow Left
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_turn_arrow_left 4",
 	recipe = {
 		{"", "mystreets:paint_brush_white","mystreets:asphalt"},
@@ -177,7 +177,7 @@ minetest.register_craft({
 	}
 })
 --Turn Arrow Right
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_turn_arrow_right 4",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:paint_brush_white",""},
@@ -186,7 +186,7 @@ minetest.register_craft({
 	}
 })
 --Parking
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_parking 5",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:paint_brush_yellow",""},
@@ -195,7 +195,7 @@ minetest.register_craft({
 	}
 })
 --Parking
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_yellow_arrows 5",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:paint_brush_yellow","mystreets:asphalt"},
@@ -205,7 +205,7 @@ minetest.register_craft({
 })
 
 --Asphalt Diagonal 1
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_diagonal_1 9",
 	recipe = {
 		{"mystreets:paint_brush_yellow", "mystreets:asphalt","mystreets:paint_brush_yellow"},
@@ -214,7 +214,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Diagonal 2
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_diagonal_2 9",
 	recipe = {
 		{"mystreets:paint_brush_yellow", "mystreets:asphalt","mystreets:paint_brush_yellow"},
@@ -223,7 +223,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Diagonal Line White
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_diagonal_line 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_white"},
@@ -232,7 +232,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Diagonal Line Yellow
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_diagonal_line_yellow 9",
 	recipe = {
 		{"mystreets:asphalt", "mystreets:asphalt","mystreets:paint_brush_yellow"},
@@ -241,7 +241,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Crosswalk
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_crosswalk 9",
 	recipe = {
 		{"mystreets:paint_brush_white", "mystreets:paint_brush_white","mystreets:paint_brush_white"},
@@ -250,7 +250,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Rainbow Crosswalk
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:asphalt_rainbow_crosswalk 9",
 	recipe = {
 		{"mystreets:paint_brush_yellow", "mystreets:paint_brush_blue","mystreets:paint_brush_red"},

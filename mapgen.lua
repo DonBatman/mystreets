@@ -1,4 +1,4 @@
-minetest.register_ore({
+core.register_ore({
 	ore_type       = "sheet",
 	ore            = "mystreets:oil_source",
 	wherein        = "air",

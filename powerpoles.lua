@@ -1,4 +1,4 @@
-minetest.register_node("mystreets:powerpole", {
+core.register_node("mystreets:powerpole", {
 	description = "Power Pole",
 	drawtype = "nodebox",
     tiles = {"mystreets_power_pole.png"},
@@ -25,9 +25,9 @@ minetest.register_node("mystreets:powerpole", {
 			{-0.3125, -0.5, -0.1875, 0.3125, 0.5, 0.1875},
 		}
 	},
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 })
-minetest.register_node("mystreets:powerpole_top", {
+core.register_node("mystreets:powerpole_top", {
 	description = "Power Pole Top",
 	drawtype = "nodebox",
     tiles = {"mystreets_power_pole_top_tb.png^[transformFXR90",
@@ -66,9 +66,9 @@ minetest.register_node("mystreets:powerpole_top", {
 			{-0.375, -0.1875, -0.375, 0.375, 0.1875, 0.375},
 		}
 	},
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 })
-minetest.register_node("mystreets:powerpole_wires", {
+core.register_node("mystreets:powerpole_wires", {
 	description = "Power Pole Wires",
 	drawtype = "nodebox",
     tiles = {"default_obsidian.png"},
@@ -89,10 +89,10 @@ minetest.register_node("mystreets:powerpole_wires", {
 			{0, -0.5, 0.1875, 0.0625, 0.5, 0.25},
 		}
 	},
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 })
 --Crafting
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:powerpole 3",
 	recipe = {
 		{"","group:tree",""},
@@ -100,7 +100,7 @@ minetest.register_craft({
 		{"","group:tree",""},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:powerpole_top 3",
 	recipe = {
 		{"","group:tree",""},
@@ -108,7 +108,7 @@ minetest.register_craft({
 		{"","group:tree",""},
 	}
 })
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:powerpole_wires 6",
 	recipe = {
 		{"","",""},

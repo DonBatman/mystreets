@@ -3,7 +3,7 @@ core.register_craftitem("mystreets:plastic", {
     inventory_image = "mystreets_plastic.png"
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 		type = "cooking",
 		output = "mystreets:plastic 20",
 		recipe = "mystreets:tar",

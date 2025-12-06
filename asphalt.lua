@@ -42,7 +42,7 @@ local img5 = (asphalt_blocks)[i][7]
 local img6 = (asphalt_blocks)[i][8]
 
 -- Asphalt block
-	minetest.register_node("mystreets:"..nam, {
+	core.register_node("mystreets:"..nam, {
 		description = des,
 		tiles = {
 			"mystreets_asphalt"..img1,
@@ -59,10 +59,10 @@ local img6 = (asphalt_blocks)[i][8]
 		sounds = default.node_sound_stone_defaults(),
 	})
 end
-minetest.register_alias("asphalt", "mystreets:asphalt")
+core.register_alias("asphalt", "mystreets:asphalt")
 
 -- Asphalt Pothole
-minetest.register_node("mystreets:pothole1", {
+core.register_node("mystreets:pothole1", {
 	description = "Pothole",
 	tiles = {
 			"mystreets_asphalt_pothole.png",
@@ -105,7 +105,7 @@ minetest.register_node("mystreets:pothole1", {
 })
 
 -- Asphalt Pothole
-minetest.register_node("mystreets:pothole2", {
+core.register_node("mystreets:pothole2", {
 	description = "Pothole",
 	tiles = {
 			"mystreets_asphalt_pothole2.png",

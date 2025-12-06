@@ -1,6 +1,6 @@
 
 
-minetest.register_node("mystreets:trafic_light", {
+core.register_node("mystreets:trafic_light", {
 	description = "Trafic Light",
 	tiles = {
 		"tlight_tb.png",
@@ -34,7 +34,7 @@ minetest.register_node("mystreets:trafic_light", {
 	}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "mystreets:trafic_light 1",
 		recipe = {
 			{'default:obsidian','wool:red','default:obsidian'},
@@ -42,7 +42,7 @@ minetest.register_craft({
 			{'default:obsidian','wool:green','default:obsidian'}
 			}
 })
-minetest.register_node("mystreets:trafic_light_single", {
+core.register_node("mystreets:trafic_light_single", {
 	description = "Trafic Light Single",
 	tiles = {
 		"tlight_tb.png",
@@ -73,7 +73,7 @@ minetest.register_node("mystreets:trafic_light_single", {
 	}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "mystreets:trafic_light_single 1",
 		recipe = {
 			{'default:obsidian','wool:red',''},
@@ -82,7 +82,7 @@ minetest.register_craft({
 			}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "mystreets:trafic_light_single 1",
 		recipe = {
 			{'mystreets:trafic_light_single2','',''},
@@ -91,7 +91,7 @@ minetest.register_craft({
 			}
 })
 
-minetest.register_node("mystreets:trafic_light_single2", {
+core.register_node("mystreets:trafic_light_single2", {
 	description = "Trafic Light Single 2",
 	tiles = {
 		"tlight_tb.png",
@@ -122,7 +122,7 @@ minetest.register_node("mystreets:trafic_light_single2", {
 	}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "mystreets:trafic_light_single2 1",
 		recipe = {
 			{'default:obsidian','wool:green',''},
@@ -131,7 +131,7 @@ minetest.register_craft({
 			}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "mystreets:trafic_light_single2 1",
 		recipe = {
 			{'mystreets:trafic_light_single','',''},
@@ -140,36 +140,27 @@ minetest.register_craft({
 			}
 })
 
-minetest.register_node("mystreets:hazard_light", {
+core.register_node("mystreets:hazard_light", {
 	description = "Hazard Light",
 	tiles = {
-		"tlight_tb.png",
-		"tlight_tb.png",
-		"tlight_tb.png",
-		"tlight_tb.png",
-		"tlight_tb.png",
-		{name="mystreets_hazard_light_front.png", animation={type="vertical_frames",
+		{name="mystreets_hazard_light.png", animation={type="vertical_frames",
 		aspect_w=16, aspect_h=16, length=2}},
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_stop_light.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
 	light_source = 8,
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.1875, -0.1875, -0.1875, -0.125, 0.5, 0.25},
-			{-0.1875, -0.1875, -0.125, 0.1875, 0.5, 0.25},
-			{0.125, -0.1875, -0.1875, 0.1875, 0.5, 0.25},
-			{-0.1875, 0.4375, -0.1875, 0.1875, 0.5, 0.25},
-			{-0.1875, 0.125, -0.1875, 0.1875, 0.1875, 0.25},
-			{-0.1875, -0.1875, -0.1875, 0.1875, -0.125, 0.25},
+			{-0.1875, -0.25, 0.25, 0.1875, 0.5, -0.25},
 		}
 	}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "mystreets:hazard_light 1",
 		recipe = {
 			{'default:obsidian','',''},
@@ -178,36 +169,27 @@ minetest.register_craft({
 			}
 })
 
-minetest.register_node("mystreets:stop_light", {
+core.register_node("mystreets:stop_light", {
 	description = "Stop Light",
 	tiles = {
-		"tlight_tb.png",
-		"tlight_tb.png",
-		"tlight_tb.png",
-		"tlight_tb.png",
-		"tlight_tb.png",
-		{name="mystreets_stop_light_front.png", animation={type="vertical_frames",
+		{name="mystreets_stop_light.png", animation={type="vertical_frames",
 		aspect_w=16, aspect_h=16, length=2}},
 	},
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mystreets_stop_light.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky = 2},
 	light_source = 8,
-	node_box = {
+	selection_box = {
 		type = "fixed",
 		fixed = {
-			{-0.1875, -0.1875, -0.1875, -0.125, 0.5, 0.25},
-			{-0.1875, -0.1875, -0.125, 0.1875, 0.5, 0.25},
-			{0.125, -0.1875, -0.1875, 0.1875, 0.5, 0.25},
-			{-0.1875, 0.4375, -0.1875, 0.1875, 0.5, 0.25},
-			{-0.1875, 0.125, -0.1875, 0.1875, 0.1875, 0.25},
-			{-0.1875, -0.1875, -0.1875, 0.1875, -0.125, 0.25},
+			{-0.1875, -0.25, 0.25, 0.1875, 0.5, -0.25},
 		}
 	}
 })
 --craft
-minetest.register_craft({
+core.register_craft({
 		output = "mystreets:stop_light 1",
 		recipe = {
 			{'default:obsidian','',''},

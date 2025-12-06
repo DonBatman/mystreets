@@ -27,7 +27,7 @@ local slope_cbox_long4 = {
 }
 
 --Sidewalk
-minetest.register_node("mystreets:sidewalk", {
+core.register_node("mystreets:sidewalk", {
 	description = "Sidewalk",
 	drawtype = "normal",
 	tiles = {"mystreets_sidewalk.png"},
@@ -38,7 +38,7 @@ minetest.register_node("mystreets:sidewalk", {
 	sounds = default.node_sound_stone_defaults(),
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:sidewalk 2",
 	recipe = {
 		{"mystreets:concrete", "",""},
@@ -57,7 +57,7 @@ minetest.register_craft({
 			"Sidewalk Inner Stairs", 
 			"Sidewalk Outer Stairs")
 --Concrete
-minetest.register_node("mystreets:concrete", {
+core.register_node("mystreets:concrete", {
 	description = "Concrete",
 	drawtype = "normal",
 	tiles = {"mystreets_concrete.png"},
@@ -69,7 +69,7 @@ minetest.register_node("mystreets:concrete", {
 
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:concrete 4",
 	recipe = {
 		{"default:stone", "default:dirt",""},
@@ -89,7 +89,7 @@ minetest.register_craft({
 			"Concrete Outer Stairs")
 
 -- Concrete fence
-	minetest.register_node("mystreets:fence_concrete", {
+	core.register_node("mystreets:fence_concrete", {
 		description = "Concrete fence",
 		drawtype = "fencelike",
 		tiles = {"mystreets_concrete.png"},
@@ -103,7 +103,7 @@ minetest.register_craft({
 		sounds = default.node_sound_stone_defaults(),
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:fence_concrete 6",
 	recipe = {
 		{'mystreets:concrete', 'mystreets:concrete', 'mystreets:concrete'},
@@ -112,7 +112,7 @@ minetest.register_craft({
 })
 
 -- Concrete seperating wall
-	minetest.register_node("mystreets:precast_concrete_seperating_wall", {
+	core.register_node("mystreets:precast_concrete_seperating_wall", {
 		description = "Precast concrete seperating wall",
 		tiles = {"mystreets_concrete.png"},
 		drawtype = "nodebox",
@@ -140,7 +140,7 @@ minetest.register_craft({
 		}
 	})
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:precast_concrete_seperating_wall 5",
 	recipe = {
 		{'', 'mystreets:concrete', ''},
@@ -149,7 +149,7 @@ minetest.register_craft({
 	}
 })
 -- Concrete cylinder
-	minetest.register_node("mystreets:precast_concrete_cylinder", {
+	core.register_node("mystreets:precast_concrete_cylinder", {
 		description = "Precast concrete cylinder",
 		tiles = {"mystreets_concrete.png"},
 		drawtype = "nodebox",
@@ -178,7 +178,7 @@ minetest.register_craft({
 		}
 	})
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:precast_concrete_cylinder 8",
 	recipe = {
 		{'mystreets:concrete', 'mystreets:concrete', 'mystreets:concrete'},
@@ -211,7 +211,7 @@ local slope_cbox_long = {
 }
 
 --Sidewalk Ramp
-minetest.register_node("mystreets:ramp_sidewalk", {
+core.register_node("mystreets:ramp_sidewalk", {
 	description = "Sidewalk Ramp",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -220,12 +220,12 @@ minetest.register_node("mystreets:ramp_sidewalk", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_sidewalk 2",
 	recipe = {
 		{"", "",""},
@@ -233,7 +233,7 @@ minetest.register_craft({
 		{"", "mystreets:sidewalk","mystreets:sidewalk"},
 	}
 })
-minetest.register_node("mystreets:ramp_sidewalk_long", {
+core.register_node("mystreets:ramp_sidewalk_long", {
 	description = "Sidewalk Ramp Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -242,12 +242,12 @@ minetest.register_node("mystreets:ramp_sidewalk_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_sidewalk_long 2",
 	recipe = {
 		{"", "",""},
@@ -255,7 +255,7 @@ minetest.register_craft({
 		{"mystreets:sidewalk", "mystreets:sidewalk","mystreets:sidewalk"},
 	}
 })
-minetest.register_node("mystreets:ramp_sidewalk3", {
+core.register_node("mystreets:ramp_sidewalk3", {
 	description = "Sidewalk Ramp 3",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long3.obj",
@@ -264,12 +264,12 @@ minetest.register_node("mystreets:ramp_sidewalk3", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long3,
 	selection_box = slope_cbox_long3
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_sidewalk3 2",
 	recipe = {
 		{"", "",""},
@@ -277,7 +277,7 @@ minetest.register_craft({
 		{"mystreets:sidewalk", "mystreets:sidewalk","mystreets:sidewalk"},
 	}
 })
-minetest.register_node("mystreets:ramp_sidewalk4", {
+core.register_node("mystreets:ramp_sidewalk4", {
 	description = "Sidewalk Ramp 4",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long4.obj",
@@ -286,12 +286,12 @@ minetest.register_node("mystreets:ramp_sidewalk4", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long4,
 	selection_box = slope_cbox_long4
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_sidewalk4 2",
 	recipe = {
 		{"", "","mystreets:sidewalk"},
@@ -301,7 +301,7 @@ minetest.register_craft({
 })
 
 --Concrete Ramp
-minetest.register_node("mystreets:ramp_concrete", {
+core.register_node("mystreets:ramp_concrete", {
 	description = "Concrete Ramp",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -310,12 +310,12 @@ minetest.register_node("mystreets:ramp_concrete", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_concrete 2",
 	recipe = {
 		{"", "",""},
@@ -323,7 +323,7 @@ minetest.register_craft({
 		{"", "mystreets:concrete","mystreets:concrete"},
 	}
 })
-minetest.register_node("mystreets:ramp_concrete_long", {
+core.register_node("mystreets:ramp_concrete_long", {
 	description = "concrete Ramp Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -332,12 +332,12 @@ minetest.register_node("mystreets:ramp_concrete_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_concrete_long 2",
 	recipe = {
 		{"", "",""},

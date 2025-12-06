@@ -51,7 +51,7 @@ local slope_cbox_long4 = {
 }
 
 --Asphalt Ramp
-minetest.register_node("mystreets:ramp_asphalt", {
+core.register_node("mystreets:ramp_asphalt", {
 	description = "Asphalt Ramp",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -60,12 +60,12 @@ minetest.register_node("mystreets:ramp_asphalt", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt 2",
 	recipe = {
 		{"", "",""},
@@ -73,7 +73,7 @@ minetest.register_craft({
 		{"", "mystreets:asphalt","mystreets:asphalt"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_long", {
+core.register_node("mystreets:ramp_asphalt_long", {
 	description = "Asphalt Ramp Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -82,12 +82,12 @@ minetest.register_node("mystreets:ramp_asphalt_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_long 2",
 	recipe = {
 		{"", "",""},
@@ -96,7 +96,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Ramp 3
-minetest.register_node("mystreets:ramp_asphalt3", {
+core.register_node("mystreets:ramp_asphalt3", {
 	description = "Asphalt Ramp 3",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long3.obj",
@@ -105,12 +105,12 @@ minetest.register_node("mystreets:ramp_asphalt3", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long3,
 	selection_box = slope_cbox_long3
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt3 2",
 	recipe = {
 		{"", "",""},
@@ -119,7 +119,7 @@ minetest.register_craft({
 	}
 })
 --Asphalt Ramp 4
-minetest.register_node("mystreets:ramp_asphalt4", {
+core.register_node("mystreets:ramp_asphalt4", {
 	description = "Asphalt Ramp 4",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long4.obj",
@@ -128,13 +128,13 @@ minetest.register_node("mystreets:ramp_asphalt4", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long4,
 	selection_box = slope_cbox_long4
 })
 
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt4 2",
 	recipe = {
 		{"", "","mystreets:asphalt"},
@@ -144,7 +144,7 @@ minetest.register_craft({
 })
 
 --Asphalt Center Dashed Ramp
-minetest.register_node("mystreets:ramp_asphalt_center_dashed", {
+core.register_node("mystreets:ramp_asphalt_center_dashed", {
 	description = "Asphalt Center Dashed Ramp",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -153,12 +153,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_dashed", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_dashed 2",
 	recipe = {
 		{"", "",""},
@@ -166,7 +166,7 @@ minetest.register_craft({
 		{"", "mystreets:asphalt_center_dashed","mystreets:asphalt_center_dashed"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_dashed_long", {
+core.register_node("mystreets:ramp_asphalt_center_dashed_long", {
 	description = "Asphalt Center Dashed Ramp Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -175,12 +175,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_dashed_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_dashed_long 2",
 	recipe = {
 		{"", "",""},
@@ -188,7 +188,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_center_dashed", "mystreets:asphalt_center_dashed","mystreets:asphalt_center_dashed"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_dashed3", {
+core.register_node("mystreets:ramp_asphalt_center_dashed3", {
 	description = "Asphalt Center Dashed Ramp Long 3",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long3.obj",
@@ -197,12 +197,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_dashed3", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long3,
 	selection_box = slope_cbox_long3
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_dashed3 2",
 	recipe = {
 		{"", "",""},
@@ -210,7 +210,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_center_dashed", "mystreets:asphalt_center_dashed","mystreets:asphalt_center_dashed"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_dashed4", {
+core.register_node("mystreets:ramp_asphalt_center_dashed4", {
 	description = "Asphalt Center Dashed Ramp Long 4",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long4.obj",
@@ -219,12 +219,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_dashed4", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long4,
 	selection_box = slope_cbox_long4
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_dashed4 2",
 	recipe = {
 		{"", "","mystreets:asphalt_center_dashed"},
@@ -234,7 +234,7 @@ minetest.register_craft({
 })
 
 --Asphalt Side Solid left Ramp
-minetest.register_node("mystreets:ramp_asphalt_side_solid_left", {
+core.register_node("mystreets:ramp_asphalt_side_solid_left", {
 	description = "Asphalt Side Solid Ramp Left",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -243,12 +243,12 @@ minetest.register_node("mystreets:ramp_asphalt_side_solid_left", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_side_solid_left 2",
 	recipe = {
 		{"", "",""},
@@ -256,7 +256,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_side_solid", "mystreets:asphalt_side_solid",""},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_side_solid_left_long", {
+core.register_node("mystreets:ramp_asphalt_side_solid_left_long", {
 	description = "Asphalt Side Solid Ramp Left Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -265,12 +265,12 @@ minetest.register_node("mystreets:ramp_asphalt_side_solid_left_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_side_solid_left_long 2",
 	recipe = {
 		{"", "",""},
@@ -278,7 +278,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_side_solid", "mystreets:asphalt_side_solid","mystreets:asphalt_side_solid"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_side_solid_left3", {
+core.register_node("mystreets:ramp_asphalt_side_solid_left3", {
 	description = "Asphalt Side Solid Ramp Left 3",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long3.obj",
@@ -287,12 +287,12 @@ minetest.register_node("mystreets:ramp_asphalt_side_solid_left3", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long3,
 	selection_box = slope_cbox_long3
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_side_solid_left3 2",
 	recipe = {
 		{"", "",""},
@@ -300,7 +300,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_side_solid", "mystreets:asphalt_side_solid",""},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_side_solid_left4", {
+core.register_node("mystreets:ramp_asphalt_side_solid_left4", {
 	description = "Asphalt Side Solid Ramp Left 4",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long4.obj",
@@ -309,12 +309,12 @@ minetest.register_node("mystreets:ramp_asphalt_side_solid_left4", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long4,
 	selection_box = slope_cbox_long4
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_side_solid_left4 2",
 	recipe = {
 		{"mystreets:asphalt_side_solid", "",""},
@@ -324,7 +324,7 @@ minetest.register_craft({
 })
 
 --Asphalt Side Solid Ramp Right
-minetest.register_node("mystreets:ramp_asphalt_side_solid_right", {
+core.register_node("mystreets:ramp_asphalt_side_solid_right", {
 	description = "Asphalt Side Solid Ramp Right",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -333,12 +333,12 @@ minetest.register_node("mystreets:ramp_asphalt_side_solid_right", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_side_solid_right 2",
 	recipe = {
 		{"", "",""},
@@ -346,7 +346,7 @@ minetest.register_craft({
 		{"", "mystreets:asphalt_side_solid","mystreets:asphalt_side_solid"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_side_solid_right_long", {
+core.register_node("mystreets:ramp_asphalt_side_solid_right_long", {
 	description = "Asphalt Side Solid Ramp Right Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -355,12 +355,12 @@ minetest.register_node("mystreets:ramp_asphalt_side_solid_right_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_side_solid_right_long 2",
 	recipe = {
 		{"", "",""},
@@ -368,7 +368,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_side_solid", "mystreets:asphalt_side_solid","mystreets:asphalt_side_solid"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_side_solid_right3", {
+core.register_node("mystreets:ramp_asphalt_side_solid_right3", {
 	description = "Asphalt Side Solid Ramp Right 3",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long3.obj",
@@ -377,12 +377,12 @@ minetest.register_node("mystreets:ramp_asphalt_side_solid_right3", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long3,
 	selection_box = slope_cbox_long3
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_side_solid_right3 2",
 	recipe = {
 		{"", "",""},
@@ -390,7 +390,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_side_solid", "mystreets:asphalt_side_solid","mystreets:asphalt_side_solid"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_side_solid_right4", {
+core.register_node("mystreets:ramp_asphalt_side_solid_right4", {
 	description = "Asphalt Side Solid Ramp Right 4",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long4.obj",
@@ -399,12 +399,12 @@ minetest.register_node("mystreets:ramp_asphalt_side_solid_right4", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long4,
 	selection_box = slope_cbox_long4
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_side_solid_right4 2",
 	recipe = {
 		{"", "","mystreets:asphalt_side_solid"},
@@ -414,7 +414,7 @@ minetest.register_craft({
 })
 
 --Asphalt Center Solid Ramp 
-minetest.register_node("mystreets:ramp_asphalt_center_solid", {
+core.register_node("mystreets:ramp_asphalt_center_solid", {
 	description = "Asphalt Center Solid Ramp",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -423,12 +423,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_solid", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_solid 2",
 	recipe = {
 		{"", "",""},
@@ -436,7 +436,7 @@ minetest.register_craft({
 		{"", "mystreets:asphalt_center_solid","mystreets:asphalt_center_solid"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_solid_long", {
+core.register_node("mystreets:ramp_asphalt_center_solid_long", {
 	description = "Asphalt Center Solid Ramp Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -445,12 +445,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_solid_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_solid_long 2",
 	recipe = {
 		{"", "",""},
@@ -458,7 +458,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_center_solid", "mystreets:asphalt_center_solid","mystreets:asphalt_center_solid"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_solid3", {
+core.register_node("mystreets:ramp_asphalt_center_solid3", {
 	description = "Asphalt Center Solid Ramp 3",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long3.obj",
@@ -467,12 +467,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_solid3", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long3,
 	selection_box = slope_cbox_long3
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_solid3 2",
 	recipe = {
 		{"", "",""},
@@ -480,7 +480,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_center_solid", "mystreets:asphalt_center_solid","mystreets:asphalt_center_solid"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_solid4", {
+core.register_node("mystreets:ramp_asphalt_center_solid4", {
 	description = "Asphalt Center Solid Ramp 4",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long4.obj",
@@ -489,12 +489,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_solid4", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long4,
 	selection_box = slope_cbox_long4
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_solid4 2",
 	recipe = {
 		{"", "","mystreets:asphalt_center_solid"},
@@ -504,7 +504,7 @@ minetest.register_craft({
 })
 
 --Asphalt Center Solid and Dashed Ramp
-minetest.register_node("mystreets:ramp_asphalt_center_solid_dashed", {
+core.register_node("mystreets:ramp_asphalt_center_solid_dashed", {
 	description = "Asphalt Center Solid Dashed Ramp",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -513,12 +513,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_solid_dashed", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_solid_dashed 2",
 	recipe = {
 		{"", "",""},
@@ -526,7 +526,7 @@ minetest.register_craft({
 		{"", "mystreets:asphalt_center_solid_dashed","mystreets:asphalt_center_solid_dashed"},
 	}
 }) 
-minetest.register_node("mystreets:ramp_asphalt_center_solid_dashed_long", {
+core.register_node("mystreets:ramp_asphalt_center_solid_dashed_long", {
 	description = "Asphalt Center Solid Dashed Ramp Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -535,12 +535,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_solid_dashed_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_solid_dashed_long 2",
 	recipe = {
 		{"", "",""},
@@ -548,7 +548,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_center_solid_dashed", "mystreets:asphalt_center_solid_dashed","mystreets:asphalt_center_solid_dashed"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_solid_dashed3", {
+core.register_node("mystreets:ramp_asphalt_center_solid_dashed3", {
 	description = "Asphalt Center Solid Dashed Ramp 3",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long3.obj",
@@ -557,12 +557,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_solid_dashed3", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long3,
 	selection_box = slope_cbox_long3
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_solid_dashed3 2",
 	recipe = {
 		{"", "",""},
@@ -570,7 +570,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_center_solid_dashed", "mystreets:asphalt_center_solid_dashed","mystreets:asphalt_center_solid_dashed"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_solid_dashed4", {
+core.register_node("mystreets:ramp_asphalt_center_solid_dashed4", {
 	description = "Asphalt Center Solid Dashed Ramp 4",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long4.obj",
@@ -579,12 +579,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_solid_dashed4", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long4,
 	selection_box = slope_cbox_long4
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_solid_dashed4 2",
 	recipe = {
 		{"", "","mystreets:asphalt_center_solid_dashed"},
@@ -594,7 +594,7 @@ minetest.register_craft({
 })
 
 --Asphalt Center Double Solid Ramp 
-minetest.register_node("mystreets:ramp_asphalt_center_double_solid", {
+core.register_node("mystreets:ramp_asphalt_center_double_solid", {
 	description = "Asphalt Center Double Solid Ramp",
 	drawtype = "mesh",
 	mesh = "slope_test_slope.obj",
@@ -603,12 +603,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_double_solid", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox,
 	selection_box = slope_cbox
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_double_solid 2",
 	recipe = {
 		{"", "",""},
@@ -616,7 +616,7 @@ minetest.register_craft({
 		{"", "mystreets:asphalt_center_solid_double","mystreets:asphalt_center_solid_double"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_double_solid_long", {
+core.register_node("mystreets:ramp_asphalt_center_double_solid_long", {
 	description = "Asphalt Center Double Solid Ramp Long",
 	drawtype = "mesh",
 	mesh = "slope_test_slope_long.obj",
@@ -625,12 +625,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_double_solid_long", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long,
 	selection_box = slope_cbox_long
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_double_solid_long 2",
 	recipe = {
 		{"", "",""},
@@ -638,7 +638,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_center_solid_double", "mystreets:asphalt_center_solid_double","mystreets:asphalt_center_solid_double"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_double_solid3", {
+core.register_node("mystreets:ramp_asphalt_center_double_solid3", {
 	description = "Asphalt Center Double Solid Ramp 3",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long3.obj",
@@ -647,12 +647,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_double_solid3", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long3,
 	selection_box = slope_cbox_long3
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_double_solid3 2",
 	recipe = {
 		{"", "",""},
@@ -660,7 +660,7 @@ minetest.register_craft({
 		{"mystreets:asphalt_center_solid_double", "mystreets:asphalt_center_solid_double","mystreets:asphalt_center_solid_double"},
 	}
 })
-minetest.register_node("mystreets:ramp_asphalt_center_double_solid4", {
+core.register_node("mystreets:ramp_asphalt_center_double_solid4", {
 	description = "Asphalt Center Double Solid Ramp 4",
 	drawtype = "mesh",
 	mesh = "mystreets_slope_long4.obj",
@@ -669,12 +669,12 @@ minetest.register_node("mystreets:ramp_asphalt_center_double_solid4", {
 	paramtype2 = "facedir",
 	groups = {cracky = 1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = slope_cbox_long4,
 	selection_box = slope_cbox_long4
 })
 --Craft
-minetest.register_craft({
+core.register_craft({
 	output = "mystreets:ramp_asphalt_center_double_solid4 2",
 	recipe = {
 		{"", "","mystreets:asphalt_center_solid_double"},
