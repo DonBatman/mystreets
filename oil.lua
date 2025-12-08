@@ -27,7 +27,7 @@ core.register_node("mystreets:oil_flowing", {
 	liquid_alternative_flowing = "mystreets:oil_flowing",
 	liquid_alternative_source = "mystreets:oil_source",
 	liquid_viscosity = 3,
-	liquid_renewable = true,
+	liquid_renewable = false,
 	liquid_range = 3,
 	damage_per_second = 1, 
 	post_effect_color = {a=250, r=0, g=0, b=0},
@@ -124,7 +124,7 @@ core.register_node("mystreets:tar_flowing", {
 	liquid_alternative_flowing = "mystreets:tar_flowing",
 	liquid_alternative_source = "mystreets:tar",
 	liquid_viscosity = 7,
-	liquid_renewable = true,
+	liquid_renewable = false,
 	liquid_range = 1,
 	damage_per_second = 1, 
 --	post_effect_color = {a=250, r=0, g=0, b=0},
@@ -217,7 +217,6 @@ bucket.register_liquid(
 ---------------------------------------------------------------------------
 --Fuel Sources
 ---------------------------------------------------------------------------
-
 core.register_craft({
 	type = "fuel",
 	recipe = "mystreets:bucket_oil",
@@ -244,50 +243,13 @@ core.register_craft({
 ----------------------------------------------------------------------------
 --Turn Oil to Tar when near lava
 ----------------------------------------------------------------------------
-default.cool_lava_source = function(pos)
-	core.set_node(pos, {name="mystreets:tar"})
-	core.sound_play("default_cool_lava", {pos = pos,  gain = 0.25})
-end
-
-default.cool_lava_flowing = function(pos)
-	core.set_node(pos, {name="mystreets:tar"})
-	core.sound_play("default_cool_lava", {pos = pos,  gain = 0.25})
-end
-core.register_abm({
-	nodenames = {"mystreets:oil_flowing"},
-	neighbors = {"default:lava_source"},
-	interval = 1,
-	chance = 1,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.cool_lava_flowing(pos, node, active_object_count, active_object_count_wider)
-	end,
-})
-
-core.register_abm({
-	nodenames = {"mystreets:oil_flowing"},
-	neighbors = {"default:lava_flowing"},
-	interval = 1,
-	chance = 1,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.cool_lava_source(pos, node, active_object_count, active_object_count_wider)
-	end,
-})
 core.register_abm({
 	nodenames = {"mystreets:oil_source"},
-	neighbors = {"default:lava_source"},
+	neighbors = {"default:lava_source", "default:lava_flowing"},
 	interval = 1,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.cool_lava_flowing(pos, node, active_object_count, active_object_count_wider)
-	end,
-})
-
-core.register_abm({
-	nodenames = {"mystreets:oil_source"},
-	neighbors = {"default:lava_flowing"},
-	interval = 1,
-	chance = 1,
-	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.cool_lava_source(pos, node, active_object_count, active_object_count_wider)
+		core.set_node(pos, {name="mystreets:tar"})
+		core.sound_play("default_cool_lava", {pos = pos,  gain = 0.25})
 	end,
 })
