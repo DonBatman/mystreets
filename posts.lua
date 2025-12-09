@@ -276,11 +276,13 @@ core.register_craftitem("mystreets:hardened_steel", {
 })
 --Craft
 core.register_craft({
-		type = "cooking",
 		output = "mystreets:hardened_steel",
-		recipe = "default:steel_ingot",
-		cooktime = 2
-	})
+		recipe = {
+		{"mystreets:ingot_zinc","default:steel_ingot",""},
+		{"","",""},
+		{"","",""},
+	}
+})
 --post 3 way corner without top
 minetest.register_node("mystreets:lightpost_3cornernt", {
 	description = "Light Post 3 Way Corner No Top",
