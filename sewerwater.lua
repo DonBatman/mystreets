@@ -51,7 +51,7 @@ core.register_craft({
 	output = "mystreets:sewer_water 3",
 	recipe = {
 		{"bucket:bucket_water", "",""},
-		{"default:grass_4", "",""},
+		{"default:grass_1", "",""},
 		{"", "",""},
 	}
 })
