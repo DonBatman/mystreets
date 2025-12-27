@@ -8,7 +8,7 @@ core.register_node("mystreets:oil_flowing", {
 	tiles = {"mystreets_oil.png"},
 	special_tiles = {
 		{
-			image="mystreets_oil_flowing_animated.png",
+			name="mystreets_oil_flowing_animated.png",
 			backface_culling=false,
 			animation={type="vertical_frames", aspect_w=16, aspect_h=16, length=4.0}
 		},
@@ -104,7 +104,7 @@ core.register_node("mystreets:tar_flowing", {
 	tiles = {"mystreets_tar.png"},
 	special_tiles = {
 		{
-			image="mystreets_tar.png",
+			name="mystreets_tar.png",
 --			alpha=0.9,
 			backface_culling=false,
 			animation={type="vertical_frames", aspect_w=16, aspect_h=16, length=10.0}
