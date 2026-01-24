@@ -914,3 +914,36 @@ core.register_craft({
 		{"mystreets:paint_brush_white", "","mystreets:lightpost"},
 	}
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mystreets:stop_sign"}, 2},
+		{"dro", {"mystreets:stop_sign_post"}, 2},
+		{"dro", {"mystreets:yeild_sign"}, 2},
+		{"dro", {"mystreets:yeild_sign_post"}, 2},
+		{"dro", {"mystreets:sign_men_at_work"}, 2},
+		{"dro", {"mystreets:sign_men_at_work_post"}, 2},
+		{"dro", {"mystreets:sign_arrow_left"}, 2},
+		{"dro", {"mystreets:sign_arrow_left_post"}, 2},
+		{"dro", {"mystreets:sign_arrow_right"}, 2},
+		{"dro", {"mystreets:sign_arrow_right_post"}, 2},
+		{"dro", {"mystreets:sign_arrow_straight"}, 2},
+		{"dro", {"mystreets:sign_arrow_straight_post"}, 2},
+		{"dro", {"mystreets:sign_bump"}, 2},
+		{"dro", {"mystreets:sign_bump_post"}, 2},
+		{"dro", {"mystreets:sign_pedestrian_crossing"}, 2},
+		{"dro", {"mystreets:sign_pedestrian_crossing_post"}, 2},
+		{"dro", {"mystreets:sign_One_way_left"}, 2},
+		{"dro", {"mystreets:sign_One_way_right"}, 2},
+		{"dro", {"mystreets:sign_One_way_left_post"}, 2},
+		{"dro", {"mystreets:sign_One_way_right_post"}, 2},
+		{"dro", {"mystreets:sign_speed_25"}, 2},
+		{"dro", {"mystreets:sign_speed_50"}, 2},
+		{"dro", {"mystreets:sign_speed_90"}, 2},
+		{"dro", {"mystreets:sign_speed_100"}, 2},
+		{"dro", {"mystreets:sign_speed_25_post"}, 2},
+		{"dro", {"mystreets:sign_speed_50_post"}, 2},
+		{"dro", {"mystreets:sign_speed_90_post"}, 2},
+		{"dro", {"mystreets:sign_speed_100_post"}, 2},
+	})
+end

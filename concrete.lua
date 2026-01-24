@@ -345,3 +345,13 @@ core.register_craft({
 		{"mystreets:concrete", "mystreets:concrete","mystreets:concrete"},
 	}
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mystreets:sidewalk"}, 24},
+		{"dro", {"mystreets:concrete"}, 24},
+		{"dro", {"mystreets:fence_concrete"}, 5},
+		{"dro", {"mystreets:precast_concrete_seperating_wall"}, 5},
+		{"dro", {"mystreets:precast_concrete_cylinder"}, 5},
+	})
+end

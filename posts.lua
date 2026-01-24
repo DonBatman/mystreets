@@ -351,3 +351,19 @@ core.register_craft({
 		{"","mystreets:lightpost","mystreets:lightpost"},
 	}
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mystreets:lightpost"}, 8},
+		{"dro", {"mystreets:lightpost_l"}, 8},
+		{"dro", {"mystreets:lightpost_base"}, 8},
+		{"dro", {"mystreets:lightpost_t"}, 8},
+		{"dro", {"mystreets:lightpost_all"}, 8},
+		{"dro", {"mystreets:lightpost_allless1"}, 8},
+		{"dro", {"mystreets:lightpost_y"}, 8},
+		{"dro", {"mystreets:lightpost_3corner"}, 8},
+		{"dro", {"mystreets:hardened_steel"}, 18},
+		{"dro", {"mystreets:lightpost_3cornernt"}, 8},
+		{"dro", {"mystreets:lightpost_4cornernt"}, 8},
+	})
+end

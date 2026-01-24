@@ -340,3 +340,12 @@ core.register_craft({
 		{"mystreets:concrete", "","mystreets:concrete"},
 	}
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mystreets:manhole_cover_closed"}, 2},
+		{"dro", {"mystreets:grate"}, 3},
+		{"dro", {"mystreets:manhole"}, 2},
+		{"dro", {"mystreets:manhole_shaft"}, 5},
+	})
+end

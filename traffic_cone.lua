@@ -92,3 +92,11 @@ core.register_craft({
 		{"mystreets:ingot_galvanized_steel","","mystreets:ingot_galvanized_steel"},
 	}
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mystreets:pylon"}, 5},
+		{"dro", {"mystreets:traffic_cone"}, 5},
+		{"dro", {"mystreets:barrier"}, 5},
+	})
+end

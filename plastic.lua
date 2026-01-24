@@ -9,3 +9,9 @@ core.register_craft({
 		recipe = "mystreets:tar",
 		cooktime = 5
 	})
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mystreets:plastic"}, 12},
+	})
+end

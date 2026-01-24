@@ -58,6 +58,13 @@ local img6 = (asphalt_blocks)[i][8]
 		groups = {cracky = 1, asphalt = 1},
 		sounds = default.node_sound_stone_defaults(),
 	})
+
+	if core.get_modpath("lucky_block") then
+		lucky_block:add_blocks({
+			{"dro", {"mystreets:"..nam}, 12},
+		})
+	end
+
 end
 core.register_alias("asphalt", "mystreets:asphalt")
 

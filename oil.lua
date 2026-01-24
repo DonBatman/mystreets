@@ -253,3 +253,12 @@ core.register_abm({
 		core.sound_play("default_cool_lava", {pos = pos,  gain = 0.25})
 	end,
 })
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mystreets:oil_source"}, 12},
+		{"dro", {"mystreets:oil_barrel"}, 2},
+		{"dro", {"mystreets:tar"}, 12},
+		{"dro", {"mystreets:tar_barrel"}, 2},
+	})
+end

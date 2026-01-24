@@ -103,3 +103,11 @@ core.register_craft({
 		{"mystreets:hardened_steel","mystreets:oil_source","mystreets:hardened_steel"},
 	},
 })
+
+	if core.get_modpath("lucky_block") then
+		lucky_block:add_blocks({
+			{"dro", {"mystreets:street_light"}, 4},
+			{"dro", {"mystreets:street_dome_light"}, 4},
+			{"dro", {"mystreets:oil_lantern"}, 5},
+		})
+	end

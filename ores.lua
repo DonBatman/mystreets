@@ -191,5 +191,16 @@ core.register_craft({
 	}
 })
 
-
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mystreets:zinc"}, 10},
+		{"dro", {"mystreets:block_zinc"}, 2},
+		{"dro", {"mystreets:lead"}, 10},
+		{"dro", {"mystreets:block_lead"}, 2},
+		{"dro", {"mystreets:nickel"}, 10},
+		{"dro", {"mystreets:block_nickel"}, 2},
+		{"dro", {"mystreets:block_brass"}, 2},
+		{"dro", {"mystreets:ingot_brass"}, 10},
+	})
+end
 
